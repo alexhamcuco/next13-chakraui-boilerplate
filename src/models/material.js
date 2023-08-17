@@ -1,7 +1,12 @@
 import mongoose, { Schema } from "mongoose";
 const materialSchema = new Schema(
-  { title: String, description: String },
-  { timestamps: true }
+  { nivel:String,
+    palabrasClave: String,
+    privilegios: Boolean ,
+     tipo: String,
+     titulo: String,
+     url: String,
+     urlTitulo: String } 
 );
 const Material =
   mongoose.models.Material || mongoose.model("Material", materialSchema);
