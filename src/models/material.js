@@ -5,8 +5,9 @@ const materialSchema = new Schema(
     privilegios: Boolean ,
      tipo: String,
      titulo: String,
-     url: String,
-     urlTitulo: String } 
+     urlTitulo: String,
+     urlImagen: String
+      } 
 );
 const Material =
   mongoose.models.Material || mongoose.model("Material", materialSchema);

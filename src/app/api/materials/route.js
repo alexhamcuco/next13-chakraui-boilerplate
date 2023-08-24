@@ -9,9 +9,17 @@ export const GET = async () => {
 };
 
 export const POST = async (req) => {
-  const { title, description } = await req.json();
+  const {
+    nivel,
+    privilegios,
+    tipo,
+    titulo,
+    urlImagen,
+    urlTitulo,
+    palabrasClave,
+  } = await req.json();
   await connectMongoDB();
-  await Material.create({ title, description });
+  await Material.create({ nivel, privilegios, tipo, titulo, urlImagen, urlTitulo, palabrasClave });
   return NextResponse.json({ message: "Material Created" }, { status: 201 });
 };
 
