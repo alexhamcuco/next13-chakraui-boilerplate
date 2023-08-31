@@ -28,14 +28,14 @@ export default function Nav() {
               <Menu>
                 <Link href="/academy">Academy</Link>
                 <Menu>
-                  <MenuButton>
-                    <p>Materiales</p>
-                  </MenuButton>
-                  <MenuList alignItems={"center"}>
+                  {/* <MenuButton> */}
+                    <Link href="/materiales">Materiales</Link>
+                  {/* </MenuButton> */}
+                  {/* <MenuList alignItems={"center"}>
                     <MenuItem>Podcast</MenuItem>
                     <MenuItem>Video</MenuItem>
                     <MenuItem>Grammar</MenuItem>
-                  </MenuList>
+                  </MenuList> */}
                 </Menu>
                 <Link href="/login">Login</Link>
                 <Link href="/shop">Shop</Link>
