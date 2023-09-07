@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Card, CardBody, Text, CardFooter } from "@chakra-ui/react";
-const CardDetalle = () => {
+const CardDetalle = ({material}) => {
   return (
     <div>
       <Card>
@@ -13,7 +13,7 @@ const CardDetalle = () => {
           />
         </CardBody>
         <CardFooter>
-          <Text> a ver si funciona </Text>
+          <Text> {material.titulo} </Text>
         </CardFooter>
       </Card>
     </div>

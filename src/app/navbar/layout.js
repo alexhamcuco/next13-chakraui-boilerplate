@@ -12,12 +12,15 @@ import {
   useColorModeValue,
   Stack,
   useColorMode,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 
+
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const { onOpen } = useDisclosure();
   return (
     <>
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
@@ -28,14 +31,26 @@ export default function Nav() {
               <Menu>
                 <Link href="/academy">Academy</Link>
                 <Menu>
-                  {/* <MenuButton> */}
-                    <Link href="/materiales">Materiales</Link>
-                  {/* </MenuButton> */}
-                  {/* <MenuList alignItems={"center"}>
-                    <MenuItem>Podcast</MenuItem>
-                    <MenuItem>Video</MenuItem>
-                    <MenuItem>Grammar</MenuItem>
-                  </MenuList> */}
+                  <MenuButton onClick={onOpen}>Materiales</MenuButton>
+                  <MenuList alignItems={"center"}>
+                    <Link href="/materiales/podcasts">
+                      <MenuItem>Podcast</MenuItem>
+                    </Link>
+
+                    <Link href="/materiales/videos">
+                      <MenuItem>Video</MenuItem>
+                    </Link>
+
+                    <Link href="/materiales/gramaticas">
+                      <MenuItem>Grammar</MenuItem>
+                    </Link>
+
+                    <MenuDivider />
+
+                    <Link href="/materiales">
+                      <MenuItem>Ver todos</MenuItem>
+                    </Link>
+                  </MenuList>
                 </Menu>
                 <Link href="/login">Login</Link>
                 <Link href="/shop">Shop</Link>

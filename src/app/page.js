@@ -3,8 +3,6 @@ import { Main } from "./main/layout";
 import { getMateriales } from "./lib/api";
 
 export default async function Home() {
-  const materiales = await getMateriales();
-  console.log(materiales);
 
   return (
     <>

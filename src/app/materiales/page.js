@@ -1,9 +1,13 @@
 import React from 'react'
 import CardDetalle from '../CardDetalle/layout'
+import { getMateriales } from '../lib/api';
+import Lista from '../Lista/layout';
 
- const Materiales = () => {
+ const Materiales = async () => {
+    const materiales = await getMateriales();
+
   return (
-    <CardDetalle/>
+    <Lista materiales={materiales}/>
   )
 }
 
