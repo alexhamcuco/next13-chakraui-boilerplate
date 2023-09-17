@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import { Grid, GridItem, Flex } from "@chakra-ui/react";
+import { Grid, GridItem,  } from "@chakra-ui/react";
 import CardDetalle from '../CardDetalle/layout';
 
 const Lista = ({materiales}) => {
