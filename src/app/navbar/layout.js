@@ -44,15 +44,15 @@ export default function Nav() {
                   <MenuButton onClick={onOpen}>Materiales</MenuButton>
                   <MenuList alignItems={"center"}>
                     <Link href="/materiales/podcasts">
-                      <MenuItem>Podcast</MenuItem>
+                      <MenuItem>Podcasts</MenuItem>
                     </Link>
 
                     <Link href="/materiales/videos">
-                      <MenuItem>Video</MenuItem>
+                      <MenuItem>Videos</MenuItem>
                     </Link>
 
                     <Link href="/materiales/gramaticas">
-                      <MenuItem>Grammar</MenuItem>
+                      <MenuItem>Gramatica</MenuItem>
                     </Link>
 
                     <MenuDivider />

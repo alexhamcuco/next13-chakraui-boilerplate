@@ -7,10 +7,7 @@ const CardDetalle = ({material}) => {
     <div>
       <Card>
         <CardBody>
-          <img
-            src="https://www.spanishwithalex.com/images/cards/rutinasdiarias.jpg"
-            alt=""
-          />
+          <img src={material.urlImagen} alt="" />
         </CardBody>
         <CardFooter>
           <Text> {material.titulo} </Text>
