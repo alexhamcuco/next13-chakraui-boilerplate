@@ -1,5 +1,16 @@
 "use client";
 
+
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverHeader,
+  PopoverBody,
+} from "@chakra-ui/react";
+
 import {
   Box,
   Flex,
@@ -17,7 +28,7 @@ import {
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Link from "next/link";
-
+import MainDiv from "@/maindiv";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -64,6 +75,38 @@ export default function Nav() {
                 </Menu>
                 <Link href="/login">Login</Link>
                 <Link href="/shop">Shop</Link>
+
+                <Popover>
+                  <PopoverTrigger>
+                   
+                    <Button
+                      className="hamburger"
+                      _hover={{ bg: "transparent" }}
+                    >
+                      <span>M</span>
+                    </Button>
+
+                  </PopoverTrigger>
+
+                  <PopoverContent>
+
+                    <PopoverArrow />
+                    <PopoverCloseButton />
+                    <PopoverHeader>Menu</PopoverHeader>
+                    <PopoverBody>
+                      {/* Add your menu options here */}
+                      <Link href="/option1">
+                        <MenuItem>Option 1</MenuItem>
+                      </Link>
+                      <Link href="/option2">
+                        <MenuItem>Option 2</MenuItem>
+                      </Link>
+                      <Link href="/option3">
+                        <MenuItem>Option 3</MenuItem>
+                      </Link>
+                    </PopoverBody>
+                  </PopoverContent>
+                </Popover>
               </Menu>
             </Stack>
           </Flex>

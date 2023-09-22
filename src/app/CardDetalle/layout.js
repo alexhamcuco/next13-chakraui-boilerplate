@@ -3,10 +3,11 @@
 import React from "react";
 import { Text, Card, CardBody, CardFooter } from '@chakra-ui/react'
 import './Carddetalle.css'; // Asegúrate de importar tu archivo de CSS aquí
+import Link from "next/link";
 
 const CardDetalle = ({material}) => {
   return (
-    <div>
+    <Link href= {`${material.tipo}/${material.urlTitulo}`}>
       <Card>
         <CardBody className="tarjeta" padding={0}>
           {" "}
@@ -22,7 +23,7 @@ const CardDetalle = ({material}) => {
           <Text> {material.titulo} </Text>
         </CardFooter>
       </Card>
-    </div>
+    </Link>
   );
 };
 
