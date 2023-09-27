@@ -7,7 +7,7 @@ const Material = ({ material }) => {
   return (
     
       <Card>
-        <CardBody padding={0}>
+        <CardBody padding={100}>
           <img src={material.urlImagen} alt=""  />
         </CardBody>
         <CardFooter
@@ -24,3 +24,5 @@ const Material = ({ material }) => {
 };
 
 export default Material;
+
+

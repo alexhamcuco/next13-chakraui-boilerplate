@@ -28,3 +28,4 @@ const CardDetalle = ({material}) => {
 };
 
 export default CardDetalle;
+

@@ -33,8 +33,16 @@ import MainDiv from "@/maindiv";
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { onOpen } = useDisclosure();
+
+  
+
+
+      
+
+
   return (
     <>
+
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-around"}>
           <Box>

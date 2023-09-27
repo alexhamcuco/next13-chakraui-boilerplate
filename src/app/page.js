@@ -1,7 +1,8 @@
 import Head from "next/head";
 import { Main } from "./main/layout";
+import Footer from "./footer/layout";
 
-export default async function Home() {
+export default async function HomePage() {
 
   return (
     <>
@@ -15,3 +16,9 @@ export default async function Home() {
     </>
   );
 }
+
+
+
+
+
+
