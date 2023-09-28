@@ -5,7 +5,7 @@ import { Grid, GridItem,   } from "@chakra-ui/react";
 import CardDetalle from '../CardDetalle/layout';
 
 const Lista = ({materiales}) => {
-    console.log( materiales)
+    console.log("materiales en Lista:", materiales);
  return (
    <Grid
      templateColumns={{ sm: "1fr", md: "repeat(3, 1fr)" }}
