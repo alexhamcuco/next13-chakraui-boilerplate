@@ -7,6 +7,7 @@ import Lista from '../lista/layout';
     const materiales = await getMateriales();
 
   return (
+    
     <Lista materiales={materiales}/>
   )
 }
