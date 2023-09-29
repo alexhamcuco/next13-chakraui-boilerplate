@@ -31,9 +31,12 @@ import Link from "next/link";
 import MainDiv from "@/maindiv";
 import Info from "../infomateriales/layout";
 
-export default function Nav() {
+export default function Nav({materiales}) {
   const { colorMode, toggleColorMode } = useColorMode();
   const { onOpen } = useDisclosure();
+    const uniqueTypes = [
+      ...new Set(materiales.map((material) => material.tipo)),
+    ];
 
   
 
@@ -43,7 +46,6 @@ export default function Nav() {
 
   return (
     <>
-
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-around"}>
           <Box>
@@ -63,48 +65,38 @@ export default function Nav() {
                 <Menu>
                   <MenuButton onClick={onOpen}>Materiales</MenuButton>
                   <MenuList alignItems={"center"}>
-                    <Link href="/materiales/podcasts">
-                      <MenuItem>Podcasts</MenuItem>
-                    </Link>
+                    {uniqueTypes.map((tipo) => (
+                      <Link href={`/materiales/${tipo}`}>
+                        <MenuItem>{tipo.charAt(0).toUpperCase() + tipo.slice(1)} </MenuItem>
+                      </Link>
+                    ))}
+                    <MenuDivider />       
+                               <Link href="/materiales"> 
+                         <MenuItem>Ver todos</MenuItem>   
+                         </Link>           
 
-                    <Link href="/materiales/videos">
-                      <MenuItem>Videos</MenuItem>
-                    </Link>
-
-                    <Link href="/materiales/gramaticas">
-                      <MenuItem>Gramatica</MenuItem>
-                    </Link>
-
-                    <MenuDivider />
-
-                    <Link href="/materiales">
-                      <MenuItem>Ver todos</MenuItem>
-                    </Link>
                   </MenuList>
+
+                  
                 </Menu>
                 <Link href="/login">Login</Link>
                 <Link href="/shop">Shop</Link>
 
                 <Popover>
                   <PopoverTrigger>
-                   
                     <Button
                       className="hamburger"
                       _hover={{ bg: "transparent" }}
                     >
                       <span>M</span>
                     </Button>
-
                   </PopoverTrigger>
 
                   <PopoverContent>
-
                     <PopoverArrow />
                     <PopoverCloseButton />
                     <PopoverHeader>Menu</PopoverHeader>
-                    <PopoverBody>
-                     <Info/>
-                    </PopoverBody>
+                    <PopoverBody></PopoverBody>
                   </PopoverContent>
                 </Popover>
               </Menu>
