@@ -6,7 +6,8 @@ const materialSchema = new Schema(
      tipo: String,
      titulo: String,
      urlTitulo: String,
-     urlImagen: String
+     urlImagen: String,
+     descripcion: String
       } 
 );
 const Material =

@@ -1,5 +1,4 @@
 import React from 'react'
-import CardDetalle from '../cardDetalle/layout'
 import { getMateriales } from '../lib/api';
 import Lista from '../lista/layout';
 

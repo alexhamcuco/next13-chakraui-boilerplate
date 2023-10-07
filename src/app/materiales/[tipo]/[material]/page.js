@@ -18,7 +18,6 @@ const Material = ({ material }) => {
           }}
         >
           <Text> {material.titulo} </Text>
-          <Text> {material.descripcion} </Text>
         </CardFooter>
       </Card>
   );
