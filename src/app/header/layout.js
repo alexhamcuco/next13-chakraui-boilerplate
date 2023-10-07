@@ -39,11 +39,11 @@ const Header = () => {
           </Flex>
         </Flex>
 
-        <Flex justifyContent={{ sm: "center"  }} alignItems="center">
+        <Flex justifyContent={{ sm: "center" }} alignItems="center">
           <Flex direction="column">
-            <Text fontSize="1xl">😊 4.9/5</Text>
+            <Text fontSize="1xl"> ⭐⭐⭐⭐⭐ 5/5 </Text>
             <Text fontSize="1xl">
-              Students give Alex <br /> a good rating
+              Students give Alex <br /> a good rating. 😊
             </Text>
           </Flex>
         </Flex>
