@@ -1,6 +1,6 @@
 import React from 'react'
 import { getMateriales } from '../lib/api';
-import Lista from '../lista/layout';
+import Lista from '../Lista/layout';
 
  const Materiales = async () => {
     const materiales = await getMateriales();

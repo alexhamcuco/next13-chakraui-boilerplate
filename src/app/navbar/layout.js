@@ -49,8 +49,8 @@ export default function Nav({materiales}) {
         <Box>
           <Link href="/">
             <img
-              src="/images/logo2PNG2.webp"
-              alt="LOGO SWA"
+              src="/images/logo2PNG2.png"
+              alt="LOGO Spanish with Alex"
               width="105"
               height="105"
             />

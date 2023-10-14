@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Grid, GridItem,   } from "@chakra-ui/react";
-import CardDetalle from '../cardDetalle/layout';
+import CardDetalle from '../CardDetalle/layout';
 
 const Lista = ({materiales}) => {
     console.log("materiales en Lista:", materiales);

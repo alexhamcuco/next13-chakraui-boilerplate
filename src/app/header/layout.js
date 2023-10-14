@@ -5,6 +5,8 @@ import Image from 'next/image';
 import React from 'react'
 
 const Header = () => {
+
+  
   return (
     <div>
       <Heading>Welcome to Spanish with Alex</Heading>
@@ -22,7 +24,7 @@ const Header = () => {
         borderWidth="1px"
         borderRadius="lg"
         overflow="hidden"
-        boxShadow="lg" /* Agregar una sombra para mejorar la apariencia */
+        boxShadow="2xl" /* Agregar una sombra para mejorar la apariencia */
       >
         <Flex justifyContent="space-around" alignItems="center">
           <Flex direction="column">
