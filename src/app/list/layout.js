@@ -1,11 +1,10 @@
 "use client";
 
 import React from 'react'
-import { Grid, GridItem,   } from "@chakra-ui/react";
-import CardDetalle from '../CardDetalle/layout';
+import { Grid   } from "@chakra-ui/react";
+import CardDetail from '../cardDetail/layout';
 
-const Lista = ({materiales}) => {
-    console.log("materiales en Lista:", materiales);
+const List = ({materiales}) => {
  return (
    <Grid
      templateColumns={{ sm: "1fr", md: "repeat(3, 1fr)" }}
@@ -15,11 +14,11 @@ const Lista = ({materiales}) => {
      px={{ sm: 12, md: 44 }} // Padding horizontal (lados)
    >
      {materiales.map((material) => (
-       <CardDetalle material={material} key={material._id} />
+       <CardDetail material={material} key={material._id} />
      ))}
    </Grid>
  );
 
 }
 
-export default Lista
+export default List

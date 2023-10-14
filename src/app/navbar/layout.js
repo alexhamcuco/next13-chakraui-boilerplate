@@ -1,110 +1,141 @@
 "use client";
 
-
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverHeader,
-  PopoverBody,
-} from "@chakra-ui/react";
-
 import {
   Box,
   Flex,
+  Avatar,
+  HStack,
+  IconButton,
   Button,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
   MenuDivider,
+  useDisclosure,
   useColorModeValue,
   Stack,
   useColorMode,
-  useDisclosure,
-  
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 
-
-export default function Nav({materiales}) {
+const Nav = ({ materiales }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
-  const { onOpen } = useDisclosure();
-    const uniqueTypes = [
-      ...new Set(materiales.map((material) => material.tipo)),
-    ];
-
-  
-
-
-      
-
+  const uniqueTypes = [...new Set(materiales.map((material) => material.tipo))];
 
   return (
-    <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
-      <Flex h={16} alignItems={"center"} justifyContent={"space-around"}>
-        <Box>
-          <Link href="/">
-            <img
-              src="/images/logo2PNG2.png"
-              alt="LOGO Spanish with Alex"
-              width="105"
-              height="105"
-            />
-          </Link>
-        </Box>
-        <Flex alignItems={"center"}>
-          <Stack direction={"row"} alignItems={"center"} spacing={5}>
-            <Menu>
-              <Link href="/academy">Academy</Link>
+    <>
+      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+          <IconButton
+            size={"md"}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={"Open Menu"}
+            display={{ md: "none" }}
+            onClick={isOpen ? onClose : onOpen}
+          />
+          <HStack spacing={8} alignItems={"center"}>
+            <Box>
+              <Link href="/">
+                <img
+                  src="/images/logo2PNG2.webp"
+                  alt="LOGO SWA"
+                  width="86"
+                  height="86"
+                />
+              </Link>
+            </Box>
+            <HStack
+              as={"nav"}
+              spacing={4}
+              display={{ base: "none", md: "flex" }}
+            >
               <Menu>
-                <MenuButton onClick={onOpen}>Materiales</MenuButton>
-                <MenuList alignItems={"center"}>
-                  {uniqueTypes.map((tipo) => (
-                    <Link href={`/materiales/${tipo}`}>
-                      <MenuItem>
-                        {tipo.charAt(0).toUpperCase() + tipo.slice(1)}{" "}
-                      </MenuItem>
+                <Link href="/academy">Academy</Link>
+                <Menu>
+                  <MenuButton onClick={onOpen}>Materiales</MenuButton>
+                  <MenuList alignItems={"center"}>
+                    {uniqueTypes.map((type) => (
+                      <Link href={`/materials/${type}`} key={type}>
+                        <MenuItem>
+                          {type.charAt(0).toUpperCase() + type.slice(1)}
+                        </MenuItem>
+                      </Link>
+                    ))}
+                    <MenuDivider />
+                    <Link href="/materials">
+                      <MenuItem>Ver todos</MenuItem>
                     </Link>
-                  ))}
-                  <MenuDivider />
-                  <Link href="/materiales">
-                    <MenuItem>Ver todos</MenuItem>
-                  </Link>
-                </MenuList>
+                  </MenuList>
+                </Menu>
+                <Link href="/login">Login</Link>
+                <Link href="/shop">Shop</Link>
               </Menu>
-              <Link href="/login">Login</Link>
-              <Link href="/shop">Shop</Link>
-
-              <Popover>
-                <PopoverTrigger>
-                  <Button className="hamburger" _hover={{ bg: "transparent" }}>
-                    <span>M</span>
-                  </Button>
-                </PopoverTrigger>
-
-                <PopoverContent>
-                  <PopoverArrow />
-                  <PopoverCloseButton />
-                  <PopoverHeader>Menu</PopoverHeader>
-                  <PopoverBody></PopoverBody>
-                </PopoverContent>
-              </Popover>
-            </Menu>
-          </Stack>
-        </Flex>
-        <Flex alignItems={"center"}>
-          <Stack direction={"row"} spacing={7}>
-            <Button variant="outline">Get Started</Button>
+            </HStack>
+          </HStack>
+          <Flex alignItems={"center"}>
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
-          </Stack>
+            <Menu>
+              <MenuButton
+                as={Button}
+                rounded={"full"}
+                variant={"link"}
+                cursor={"pointer"}
+                minW={0}
+              >
+                <Avatar
+                  size={"sm"}
+                  src={
+                    "https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
+                  }
+                />
+              </MenuButton>
+              <MenuList>
+                <MenuItem>Link 1</MenuItem>
+                <MenuItem>Link 2</MenuItem>
+                <MenuDivider />
+                <MenuItem>Link 3</MenuItem>
+              </MenuList>
+            </Menu>
+          </Flex>
         </Flex>
-      </Flex>
-    </Box>
+
+        {isOpen && (
+          <Box pb={4} display={{ md: "none" }}>
+            <Stack as={"nav"} spacing={4}>
+              <Menu>
+                <Link href="/academy">Academy</Link>
+                <Menu>
+                  <MenuButton textAlign={"left"} onClick={onOpen}>
+                    Materiales
+                  </MenuButton>
+                  <MenuList>
+                    {uniqueTypes.map((type) => (
+                      <Link href={`/materials/${type}`} key={type}>
+                        <MenuItem>
+                          {type.charAt(0).toUpperCase() + type.slice(1)}
+                        </MenuItem>
+                      </Link>
+                    ))}
+                    <MenuDivider />
+                    <Link href="/materials">
+                      <MenuItem>Ver todos</MenuItem>
+                    </Link>
+                  </MenuList>
+                </Menu>
+                <Link href="/login">Login</Link>
+                <Link href="/shop">Shop</Link>
+              </Menu>
+            </Stack>
+          </Box>
+        )}
+      </Box>
+    </>
   );
-}
+};
+
+export default Nav;

@@ -1,14 +1,14 @@
 import React from 'react'
 import { getMateriales } from '../lib/api';
-import Lista from '../Lista/layout';
+import List from '../list/layout';
 
- const Materiales = async () => {
+ const Materials = async () => {
     const materiales = await getMateriales();
 
   return (
     
-    <Lista materiales={materiales}/>
+    <List materiales={materiales}/>
   )
 }
 
-export default Materiales
+export default Materials
