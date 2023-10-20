@@ -27,7 +27,15 @@ const Nav = ({ materiales }) => {
 
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+      <Box
+        bg={useColorModeValue("gray.100", "gray.900")}
+        px={4}
+        position="fixed" // Esta línea fija la posición de la barra de navegación
+        top={0}
+        left={0}
+        right={0}
+        zIndex={999} // Opcional, para asegurarte de que esté por encima de otros elementos
+      >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
