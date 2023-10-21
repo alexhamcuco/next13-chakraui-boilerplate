@@ -12,7 +12,11 @@ import React from "react";
 
 const Header = () => {
   return (
-    <Container mt={24} textAlign={"center"} maxW="6xl">
+    <Container
+      mt={24}
+      textAlign={"center"}
+      maxW={{ sm: "container.sm", md: "6xl" }}
+    >
       <Heading mb={4}>Welcome to Spanish with Alex</Heading>
       <Flex justifyContent={"center"}>
         <Image
@@ -33,18 +37,18 @@ const Header = () => {
         position="relative"
         top="-20px"
         py={8}
-        px={12}
+        // px={12}
       >
         <Flex justifyContent={"space-between"}>
-          <Flex direction={"column"} gap={4} mr={24}>
+          <Flex direction={"column"}>
             <Text fontSize="1xl">Sessions</Text>
             <Text fontSize="6xl">10</Text>
           </Flex>
-          <Flex direction={"column"} gap={4} mr={24}>
+          <Flex direction={"column"}>
             <Text fontSize="1xl">Lessons</Text>
             <Text fontSize="6xl">200</Text>
           </Flex>
-          <Flex direction={"column"} gap={4}>
+          <Flex direction={"column"}>
             <Text fontSize="1xl">Podcasts</Text>
             <Text fontSize="6xl">100</Text>
           </Flex>
