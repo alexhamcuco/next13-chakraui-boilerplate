@@ -2,9 +2,6 @@ import Head from "next/head";
 import { Main } from "./main/layout";
 
 export default async function HomePage() {
-
-  
-
   return (
     <>
       <Head>
@@ -13,13 +10,7 @@ export default async function HomePage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Main/>
+      <Main />
     </>
   );
 }
-
-
-
-
-
-

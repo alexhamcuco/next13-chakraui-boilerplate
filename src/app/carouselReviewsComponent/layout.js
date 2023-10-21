@@ -2,8 +2,8 @@
 //npm audit fix
 
 import { Box } from "@chakra-ui/react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import { Carousel } from "react-responsive-carousel";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ReviewCard from "../reviewCard/layout";
 
 const reviews = [
@@ -27,20 +27,13 @@ const reviews = [
 function CarouselReviewsComponent() {
   return (
     <Box>
-      
-      <Carousel>
+      {/* <Carousel>
         {reviews.map((review) => (
           <ReviewCard key={review.id} review={review} />
         ))}
-      </Carousel>
+      </Carousel> */}
     </Box>
   );
 }
 
-
-
-
-
-
 export default CarouselReviewsComponent;
-
