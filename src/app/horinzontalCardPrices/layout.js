@@ -14,7 +14,7 @@ const HorizontalCardPrices = () => {
         alignItems="center"
       >
         <Flex direction="column">
-          <Text fontSize="6xl" color="yellow">
+          <Text fontSize="6xl" color="orange">
             $20
           </Text>
           <Text fontSize="sm" mt={2}>

@@ -27,11 +27,12 @@ const HorizontalCard = () => {
           <Text ml="4">Join el club!</Text>
           <Button
             ml="4"
-            bg="red.500"
-            color="white"
+            border="2px solid red"
+            color="red"
             borderRadius="full"
             _hover={{
-              bg: "red.600",
+              bg: "red.500",
+              color: "white",
             }}
           >
             Button
