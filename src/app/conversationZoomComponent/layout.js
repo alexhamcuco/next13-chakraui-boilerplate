@@ -36,7 +36,7 @@ const ConversationZoomComponent = () => {
           <Box w={{ base: "100%", md: "50%" }}>
             <Flex>
               <Image
-                src="images\calander img.png"
+                src="images\calander_img.png"
                 alt="Alex talking with student"
               />
             </Flex>
