@@ -1,7 +1,7 @@
 //npm install pure-react-carousel
 //npm audit fix
 
-import { Box } from "@chakra-ui/react";
+import { Container, Flex, Text } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import MaterialCard from "../materialCard/layout";
@@ -26,13 +26,23 @@ const reviews = [
 
 function MaterialCardCarousel() {
   return (
-    <Box>
+    <Container
+      mt={24}
+      textAlign={"center"}
+      maxW={{ sm: "container.sm", md: "6xl" }}
+    >
+      <Flex justifyContent="center">
+        <Text color="red">Enunciado</Text>
+      </Flex>
+      <Text>
+        Enjoy the latest content now!
+      </Text>
       <Carousel>
         {reviews.map((review) => (
           <MaterialCard key={review.id} review={review} />
         ))}
       </Carousel>
-    </Box>
+    </Container>
   );
 }
 

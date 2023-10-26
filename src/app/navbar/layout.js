@@ -19,6 +19,8 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Link from "next/link";
+import './NavBar.css' ; 
+
 
 const Nav = ({ materiales }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -58,7 +60,9 @@ const Nav = ({ materiales }) => {
               display={{ base: "none", md: "flex" }}
             >
               <Menu>
-                <Link href="/academy">Academy</Link>
+                <Link href="/academy" className="hoverRed">
+                  Academy
+                </Link>
                 <Menu>
                   <MenuButton onClick={onOpen}>Materiales</MenuButton>
                   <MenuList alignItems={"center"}>
@@ -75,8 +79,12 @@ const Nav = ({ materiales }) => {
                     </Link>
                   </MenuList>
                 </Menu>
-                <Link href="/login">Login</Link>
-                <Link href="/shop">Shop</Link>
+                <Link href="/login" className="hoverRed">
+                  Login
+                </Link>
+                <Link href="/shop" className="hoverRed">
+                  Shop
+                </Link>
               </Menu>
             </HStack>
           </HStack>
@@ -93,20 +101,8 @@ const Nav = ({ materiales }) => {
               cursor={"pointer"}
               minW={0}
             >
-              <Avatar
-                size={"sm"}
-                ml={2}
-                src={
-                  ""
-                }
-              />
+              <Avatar size={"sm"} ml={2} src={""} />
             </MenuButton>
-            <MenuList>
-              <MenuItem>Link 1</MenuItem>
-              <MenuItem>Link 2</MenuItem>
-              <MenuDivider />
-              <MenuItem>Link 3</MenuItem>
-            </MenuList>
           </Menu>
         </Flex>
       </Flex>
@@ -134,8 +130,12 @@ const Nav = ({ materiales }) => {
                   </Link>
                 </MenuList>
               </Menu>
-              <Link href="/login">Login</Link>
-              <Link href="/shop">Shop</Link>
+              <Link href="/login" className="hoverRed">
+                Login
+              </Link>
+              <Link href="/shop" className="hoverRed">
+                Shop
+              </Link>
             </Menu>
           </Stack>
         </Box>

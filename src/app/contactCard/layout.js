@@ -1,5 +1,5 @@
-import { Box, Flex, Image, Text, Icon } from "@chakra-ui/react";
-import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa"; // Importa los iconos de redes sociales
+import { Box, Flex, Image, Text, Icon, Link } from "@chakra-ui/react";
+import { FaTwitter, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa"; // Importa los iconos de redes sociales
 
 const ContactCard = () => {
   return (
@@ -17,7 +17,7 @@ const ContactCard = () => {
         <Text color="red">Social Media</Text>
       </Flex>
       <Text>
-        If you want to have access to free materials, and educative pills, 
+        If you want to have access to free materials, and educative pills,
         follow me on social media and join the "familia".
       </Text>
       <Image
@@ -28,32 +28,55 @@ const ContactCard = () => {
       />
       <Text mt={4}>Sígueme en mis redes:</Text>
       <Flex justifyContent="center" mt={2}>
-        <Icon
-          as={FaTwitter}
-          boxSize={6}
-          color="blue.400"
-          border="2px solid red" // Agregar borde rojo al icono
-          p={2} // Añadir espaciado para el borde
-          borderRadius="full" // Mantener borde circular
-          mr={2}
-        />
-        <Icon
-          as={FaFacebook}
-          boxSize={6}
-          color="blue.800"
-          border="2px solid red" // Agregar borde rojo al icono
-          p={2} // Añadir espaciado para el borde
-          borderRadius="full" // Mantener borde circular
-          mr={2}
-        />
-        <Icon
-          as={FaInstagram}
-          boxSize={6}
-          color="purple.500"
-          border="2px solid red" // Agregar borde rojo al icono
-          p={2} // Añadir espaciado para el borde
-          borderRadius="full" // Mantener borde circular
-        />
+        <Link
+          href="https://www.youtube.com/channel/UCbx58EYkaC1yJBxNuOvhDOg"
+          isExternal
+        >
+          <Icon
+            as={FaYoutube}
+            boxSize={10}
+            color="blue.400"
+            border="2px solid red" // Agregar borde rojo al icono
+            p={2} // Añadir espaciado para el borde
+            borderRadius="full" // Mantener borde circular
+            mr={2}
+          />
+        </Link>
+
+        <Link href="https://twitter.com/spanishwithalex" isExternal>
+          <Icon
+            as={FaTwitter}
+            boxSize={10}
+            color="blue.400"
+            border="2px solid red" // Agregar borde rojo al icono
+            p={2} // Añadir espaciado para el borde
+            borderRadius="full" // Mantener borde circular
+            mr={2}
+          />
+        </Link>
+
+        <Link href="https://www.facebook.com/spanishwithalex" isExternal>
+          <Icon
+            as={FaFacebook}
+            boxSize={10}
+            color="blue.800"
+            border="2px solid red" // Agregar borde rojo al icono
+            p={2} // Añadir espaciado para el borde
+            borderRadius="full" // Mantener borde circular
+            mr={2}
+          />
+        </Link>
+
+        <Link href="https://www.instagram.com/spanishwithalex" isExternal>
+          <Icon
+            as={FaInstagram}
+            boxSize={10}
+            color="purple.500"
+            border="2px solid red" // Agregar borde rojo al icono
+            p={2} // Añadir espaciado para el borde
+            borderRadius="full" // Mantener borde circular
+          />
+        </Link>
       </Flex>
     </Box>
   );
