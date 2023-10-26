@@ -17,13 +17,15 @@ const HorizontalCardIlustrations = () => {
       boxShadow="2xl"
       justifyContent="space-around"
       alignItems="center"
+      maxW="700px"
+      mx="auto"
     >
       {imageSources.map((imageSource, index) => (
         <Box key={index} w="100%">
           <Image
             src={imageSource}
             alt={`Illustration ${index + 1}`}
-            w="100%"
+            w="70%"
             h="auto"
           />
         </Box>

@@ -9,7 +9,7 @@ import MaterialCard from "../materialCard/layout";
 const reviews = [
   {
     id: 1,
-    text: "ultimo podcast",
+    text: "latest podcast",
     author: "por SwA",
   },
   {

@@ -14,15 +14,10 @@ const HorizontalCard = () => {
         boxShadow="lg" /* Agregar una sombra para mejorar la apariencia */
         flexDirection="row" /* Alinear los elementos horizontalmente */
       >
-        <Image
-          src="/images/banner_img.png"
-          alt="Imagen de Alex"
-          width="300"
-          height="100"
-        />
+      
         <Flex p="4" alignItems="center">
           <Text fontSize="xl" fontWeight="bold">
-            Card Title
+              Suscríbete y...
           </Text>
           <Text ml="4">Join el club!</Text>
           <Button
