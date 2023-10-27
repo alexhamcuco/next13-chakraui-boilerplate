@@ -27,7 +27,7 @@ const reviews = [
 function MaterialCardCarousel() {
   return (
     <Container
-      mt={24}
+      mt={14}
       textAlign={"center"}
       maxW={{ sm: "container.sm", md: "6xl" }}
     >

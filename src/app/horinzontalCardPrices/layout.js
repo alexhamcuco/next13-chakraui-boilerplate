@@ -5,7 +5,7 @@ const HorizontalCardPrices = () => {
   return (
     <div>
       <Container
-        mt={24}
+        mt={9}
         textAlign={"center"}
         maxW={{ sm: "container.sm", md: "6xl" }}
       >

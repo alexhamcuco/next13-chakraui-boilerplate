@@ -2,7 +2,7 @@ import { Box, Image, Text, Flex, Center, Button } from "@chakra-ui/react";
 
 const HorizontalCard = () => {
   return (
-    <Center h="50vh" w="100%">
+    <Center h="20vh" w="100%">
       {" "}
       {/* Centrar la tarjeta horizontalmente y ajustar la altura */}
       <Box
@@ -30,7 +30,7 @@ const HorizontalCard = () => {
               color: "white",
             }}
           >
-            Button
+            Get Started!
           </Button>
         </Flex>
       </Box>

@@ -19,6 +19,8 @@ const HorizontalCardIlustrations = () => {
       alignItems="center"
       maxW="700px"
       mx="auto"
+      mt="40px"
+      mb="40px"
     >
       {imageSources.map((imageSource, index) => (
         <Box key={index} w="100%">

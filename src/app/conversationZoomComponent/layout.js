@@ -2,7 +2,7 @@ import { Box, Flex, Image, Text, Button } from "@chakra-ui/react";
 
 const ConversationZoomComponent = () => {
   return (
-    <Box p="43">
+    <Box p="83">
       <Flex justifyContent="center">
         <Flex
           w="50%"

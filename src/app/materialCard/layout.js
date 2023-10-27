@@ -2,7 +2,7 @@ import { Box, Text, Flex, Center } from "@chakra-ui/react";
 
 const MaterialCard = ({ review }) => {
   return (
-    <Center h="50vh" w="100%">
+    <Center h="15vh" w="100%">
       <Box
         maxW="100%"
         borderWidth="1px"
