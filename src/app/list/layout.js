@@ -7,7 +7,7 @@ import CardDetail from '../cardDetail/layout';
 const List = ({materiales}) => {
  return (
    <Grid
-     templateColumns={{ sm: "1fr", md: "repeat(3, 1fr)" }}
+     templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
      gap={6}
      justifyContent="space-around"
      py={3} // Padding vertical (parte superior e inferior)

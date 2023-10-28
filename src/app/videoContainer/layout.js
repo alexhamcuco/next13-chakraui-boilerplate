@@ -26,7 +26,7 @@ const VideoContainer = () => {
           <Text
             color="red"
             mb={2}
-            display={{ base: "none", md: "inherit" }}
+            display={{ base: "none", md: "block" }}
             justifyContent={"center"}
           >
             Enunciado

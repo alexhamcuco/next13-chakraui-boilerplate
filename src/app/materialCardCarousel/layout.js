@@ -29,7 +29,7 @@ function MaterialCardCarousel() {
     <Container
       mt={14}
       textAlign={"center"}
-      maxW={{ sm: "container.sm", md: "6xl" }}
+      maxW={{ base: "container.sm", md: "6xl" }}
     >
       <Flex justifyContent="center">
         <Text color="red">Enunciado</Text>

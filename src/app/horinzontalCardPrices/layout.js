@@ -16,7 +16,7 @@ const HorizontalCardPrices = () => {
       <Container
         mt={9}
         textAlign={"center"}
-        maxW={{ sm: "container.sm", md: "6xl" }}
+        maxW={{base: "container.sm", md: "6xl" }}
       >
         <Flex
           flexDirection={{ base: "column", md: "row" }}

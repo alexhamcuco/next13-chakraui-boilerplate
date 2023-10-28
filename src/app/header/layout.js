@@ -15,7 +15,7 @@ const Header = () => {
     <Container
       mt={24}
       textAlign={"center"}
-      maxW={{ sm: "container.sm", md: "6xl" }}
+      maxW={{ base: "container.sm", md: "6xl" }}
     >
       <Heading mb={4}>Welcome to Spanish with Alex</Heading>
       <Flex justifyContent={"center"}>
@@ -27,7 +27,7 @@ const Header = () => {
         />
       </Flex>
       <Flex
-        direction={{ sm: "column", md: "row" }}
+        direction={{ base: "column", md: "row" }}
         justifyContent={"space-between"}
         borderWidth={1}
         borderRadius={18}
