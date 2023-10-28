@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import {
   Box,
   Flex,
@@ -19,10 +20,9 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Link from "next/link";
-import './NavBar.css' ; 
+import "./Navbar.css";
 
-
-const Nav = ({ materiales }) => {
+const Navbar = ({ materiales }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   const uniqueTypes = [...new Set(materiales.map((material) => material.tipo))];
@@ -144,4 +144,4 @@ const Nav = ({ materiales }) => {
   );
 };
 
-export default Nav;
+export default Navbar;

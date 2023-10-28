@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Text, Flex, Center } from "@chakra-ui/react";
 
 const MaterialCard = ({ review }) => {

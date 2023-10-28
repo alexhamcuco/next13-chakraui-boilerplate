@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Flex, Image, Text, Icon, Link } from "@chakra-ui/react";
 import { FaTwitter, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa"; // Importa los iconos de redes sociales
 

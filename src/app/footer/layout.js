@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Box, Text, Link, FormControl, Input, Button } from "@chakra-ui/react";
 

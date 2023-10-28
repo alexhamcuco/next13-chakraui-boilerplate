@@ -1,5 +1,14 @@
-import { Flex, Text, VStack, Divider, Button, Container } from "@chakra-ui/react";
+"use client";
+
 import React from "react";
+import {
+  Flex,
+  Text,
+  VStack,
+  Divider,
+  Button,
+  Container,
+} from "@chakra-ui/react";
 
 const HorizontalCardPrices = () => {
   return (

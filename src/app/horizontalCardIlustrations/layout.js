@@ -1,5 +1,7 @@
-import { Flex, Image, Box } from "@chakra-ui/react";
+"use client";
+
 import React from "react";
+import { Flex, Image, Box } from "@chakra-ui/react";
 
 const HorizontalCardIlustrations = () => {
   const imageSources = [

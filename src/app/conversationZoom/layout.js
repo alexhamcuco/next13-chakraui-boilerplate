@@ -1,6 +1,8 @@
+"use client";
+
 import { Box, Flex, Image, Text, Button } from "@chakra-ui/react";
 
-const ConversationZoomComponent = () => {
+const ConversationZoom = () => {
   return (
     <Box p="83">
       <Flex justifyContent="center">
@@ -40,11 +42,11 @@ const ConversationZoomComponent = () => {
                 alt="Alex talking with student"
               />
             </Flex>
-          </Box> 
+          </Box>
         </Flex>
       </Flex>
     </Box>
   );
 };
 
-export default ConversationZoomComponent;
+export default ConversationZoom;

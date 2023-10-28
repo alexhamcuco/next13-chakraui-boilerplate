@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Image, Text, Flex, Center, Button } from "@chakra-ui/react";
 
 const HorizontalCard = () => {
@@ -14,10 +16,9 @@ const HorizontalCard = () => {
         boxShadow="lg" /* Agregar una sombra para mejorar la apariencia */
         flexDirection="row" /* Alinear los elementos horizontalmente */
       >
-      
         <Flex p="4" alignItems="center">
           <Text fontSize="xl" fontWeight="bold">
-              Suscríbete y...
+            Suscríbete y...
           </Text>
           <Text ml="4">Join el club!</Text>
           <Button

@@ -1,11 +1,14 @@
+"use client";
+
 import { Box, Text, Flex, Center } from "@chakra-ui/react";
 
 const ReviewCard = ({ review }) => {
   return (
-    <Center 
-    h="15vh"
-    // mt="10vh"
-    w="100%">
+    <Center
+      h="15vh"
+      // mt="10vh"
+      w="100%"
+    >
       <Box
         maxW="100%"
         borderWidth="1px"
