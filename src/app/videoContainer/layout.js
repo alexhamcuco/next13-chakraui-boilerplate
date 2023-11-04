@@ -38,7 +38,7 @@ const VideoContainer = () => {
           <Text mb={6}>
             Welcome to Spanish with Alex, your Spanish Academy Online. Here you
             can book personalised classes, check out my courses and study using
-            my own and exclusive materials.
+            my own and exclusive materials. 7 days-free trial
           </Text>
         </Flex>
       </Flex>

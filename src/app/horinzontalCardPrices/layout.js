@@ -46,8 +46,7 @@ const HorizontalCardPrices = () => {
             </VStack>
           </Flex>
           <Flex direction="column">
-            <CustomButton label="Buy" />
-            cancel anytime
+            <CustomButton label="Buy" />7 days-free trial
           </Flex>
         </Flex>
       </Container>
