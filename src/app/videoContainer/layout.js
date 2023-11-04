@@ -9,6 +9,7 @@ import {
   Heading,
   Box,
 } from "@chakra-ui/react";
+import CustomButton from "../customButton/layout";
 
 const VideoContainer = () => {
   return (
@@ -39,20 +40,9 @@ const VideoContainer = () => {
             can book personalised classes, check out my courses and study using
             my own and exclusive materials.
           </Text>
-          <Button
-            ml="4"
-            border="2px solid red"
-            color="red"
-            borderRadius="full"
-            _hover={{
-              bg: "red.500",
-              color: "white",
-            }}
-          >
-            Learn more
-          </Button>
         </Flex>
       </Flex>
+      <CustomButton label="Learn More" />
     </Container>
   );
 };

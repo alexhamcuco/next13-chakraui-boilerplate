@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Box, Text, Link, FormControl, Input, Button } from "@chakra-ui/react";
+import CustomButton from "../customButton/layout";
 
 const Footer = () => {
   return (
@@ -19,18 +20,7 @@ const Footer = () => {
       <Box display="inline-block" maxW="300px" mx="auto">
         <FormControl>
           <Input type="email" placeholder="Tu correo electrónico" />
-          <Button
-            mt="2"
-            border="2px solid red"
-            color="red"
-            borderRadius="full"
-            _hover={{
-              bg: "red.500",
-              color: "white",
-            }}
-          >
-            Suscríbete
-          </Button>
+          <CustomButton label="Suscription" />
         </FormControl>
       </Box>
     </Box>

@@ -9,6 +9,7 @@ import {
   Button,
   Container,
 } from "@chakra-ui/react";
+import CustomButton from "../customButton/layout";
 
 const HorizontalCardPrices = () => {
   return (
@@ -16,7 +17,7 @@ const HorizontalCardPrices = () => {
       <Container
         mt={9}
         textAlign={"center"}
-        maxW={{base: "container.sm", md: "6xl" }}
+        maxW={{ base: "container.sm", md: "6xl" }}
       >
         <Flex
           flexDirection={{ base: "column", md: "row" }}
@@ -45,18 +46,7 @@ const HorizontalCardPrices = () => {
             </VStack>
           </Flex>
           <Flex direction="column">
-            <Button
-              ml="4"
-              border="2px solid red"
-              color="red"
-              borderRadius="full"
-              _hover={{
-                bg: "red.500",
-                color: "white",
-              }}
-            >
-              Button
-            </Button>
+            <CustomButton label="Buy" />
             cancel anytime
           </Flex>
         </Flex>

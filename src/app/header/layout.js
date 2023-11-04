@@ -17,7 +17,7 @@ const Header = () => {
       textAlign={"center"}
       maxW={{ base: "container.sm", md: "6xl" }}
     >
-      <Heading mb={4}>Welcome to Spanish with Alex</Heading>
+      <Heading mb={4}> </Heading>
       <Flex justifyContent={"center"}>
         <Image
           src="/images/banner_img.png"

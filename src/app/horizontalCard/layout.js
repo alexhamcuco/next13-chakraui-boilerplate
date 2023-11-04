@@ -25,7 +25,7 @@ const HorizontalCard = () => {
             ml="4"
             border="2px solid red"
             color="red"
-            borderRadius="full"
+            display="inline-block"
             _hover={{
               bg: "red.500",
               color: "white",

@@ -48,7 +48,7 @@ const Navbar = ({ materiales }) => {
           <HStack spacing={8} alignItems={"center"}>
             <Link href="/">
               <img
-                src="/images/logo2PNG2.webp"
+                src="/images/BanderitaEspañaTampon.png"
                 alt="LOGO SWA"
                 width="78"
                 height="78"
