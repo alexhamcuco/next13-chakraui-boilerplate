@@ -1,3 +1,5 @@
+import connectMongoDB from "@/libs/mongodb";
+import UserEmail from "@/models/userEmail";
 import { NextResponse } from "next/server";
 const nodemailer = require("nodemailer");
 
@@ -6,7 +8,9 @@ export const GET = async () => {
 };
 
 export const POST = async (req) => {
-  const { userEmail } = await req.json();
+   await connectMongoDB();
+
+  const { email } = await req.json();
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -21,14 +25,18 @@ export const POST = async (req) => {
   try {
     await transporter.sendMail({
       from: process.env.NODEMAILER_EMAIL,
-      to: userEmail,
-      subject: "Prueba",
+      to: email,
+      subject: "Suscription",
       html: `
         <html>
           <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Bienvenid@ a este Newsletter</title>
+
+            <!-- imagen en la cabecera -->
+    <img src="cid:bienvenido" alt="Bienvenido" width="480" height="150">
+
             <style>
               body {
                 font-family: Arial, sans-serif;
@@ -108,7 +116,21 @@ export const POST = async (req) => {
       `,
     });
 
-    return NextResponse.json({ message: "email sent" });
+ const user =   await UserEmail.findOne({email})
+    if (!user ) {
+       await UserEmail.create({
+         email,
+       });
+
+       return NextResponse.json({ message: "email sent" });
+
+    }
+    else {
+             return NextResponse.json({ message: "email ya registrado" });
+
+
+    }
+ 
   } catch (error) {
     console.log("error", error);
     return NextResponse.json("no se pudo enviar");
