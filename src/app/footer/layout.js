@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Box, Text, Link, FormControl, Input, Button } from "@chakra-ui/react";
+import { Box, Text, Link, FormControl, Input, Checkbox } from "@chakra-ui/react";
 import CustomButton from "../customButton/layout";
 
 const Footer = () => {
@@ -21,6 +21,13 @@ const Footer = () => {
         <FormControl>
           <Input type="email" placeholder="Tu correo electrónico" />
           <CustomButton label="Suscription" />
+          <Checkbox
+            // isChecked={isChecked}
+            // onChange={(e) => setIsChecked(e.target.checked)}
+          >
+            He leído y acepto la política de privacidad y condiciones de
+            subscripción a la newsletter
+          </Checkbox>
         </FormControl>
       </Box>
     </Box>
