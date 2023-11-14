@@ -62,13 +62,32 @@ export const POST = async (req) => {
                 margin-top: 20px;
                 color: #7f8c8d;
               }
+
+               /* Estilos específicos para el primer párrafo */
+        p.first-paragraph {
+          background-color: #666; /* Gris oscuro */
+          color: #fff; /* Blanco */
+          padding: 10px; /* Espaciado interno */
+          border-radius: 5px; /* Bordes redondeados */
+        }
+
             </style>
           </head>
           <body>
+                <img src="https://www.spanishwithalex.com/images/cards/pedirPerdon.jpg" alt="Bienvenido" width="480" height="150">
+
             <h1>¡Hey! ¡Te has suscrito!</h1>
             <p>¡Bienvenido, 😃!</p>
-            <p>Y antes de nada, decir que yo no soy filólogo ni lingüista, pero conozco mi lengua materna bien y, lo más importante, creo que soy bueno enseñándola.</p>
+            <p class="first-paragraph">Y antes de nada, decir que yo no soy filólogo ni lingüista, pero conozco mi lengua materna bien y, lo más importante, creo que soy bueno enseñándola.</p>
 <p>Soy licenciado en pedagogía y tengo un Máster de enseñanza de español.</p>
+
+<!-- botón personalizado -->
+
+          <button style="ml: 4px; border: 2px solid red; color: red; width: auto; cursor: pointer; background-color: white; padding: 8px 16px; border-radius: 4px;">
+            <a href="https://www.spanishwithalex.com/" style="text-decoration: none; color: red;">
+              Confirma tu correo
+            </a>
+          </button>
 
 <p>¿Qué significa esta titulitis…? Poco, la verdad. Para decirte la verdad, aprendí más de la educación fuera de la carrera. Cualifican que estoy cualificado* (con tono divertido).</p>
 
