@@ -32,7 +32,7 @@ function MaterialCardCarousel() {
       maxW={{ base: "container.sm", md: "6xl" }}
     >
       <Flex justifyContent="center">
-        <Text color="red">Enunciado</Text>
+        <Text color="red">LATEST CONTENT</Text>
       </Flex>
       <Text>Enjoy the latest content now!</Text>
       <Carousel>

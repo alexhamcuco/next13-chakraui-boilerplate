@@ -16,7 +16,7 @@ const ConversationZoom = () => {
     >
       <Flex direction={{ base: "column", md: "row-reverse" }}>
         <Text color="red" mb={2} display={{ base: "block", md: "none" }}>
-          Enunciado
+          TUTORING
         </Text>
         <Flex justifyContent={"center"}>
           <Image
@@ -34,14 +34,14 @@ const ConversationZoom = () => {
             Enunciado
           </Text>
           <Heading fontSize="2xl" mb={4}>
-            Spanish with Alex
+            Start talking now!
           </Heading>
           <Text mb={4}>
-            Welcome to Spanish with Alex, your Spanish Academy Online. Here you
-            can book personalised classes, check out my courses and study using
-            my own and exclusive materials.
+            I have been teaching for more than ten years now, time flies, adults, children, all levels, 
+            exams preparations and conversational skills, if you want to book a lesson 
+            with you can start today!
           </Text>
-          <CustomButton label="mostrar alerta" onClick={showAlert} />
+          <CustomButton label="Book a lesson" onClick={showAlert} />
         </Flex>
       </Flex>
     </Container>

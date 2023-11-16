@@ -16,6 +16,8 @@ export const POST = async (req) => {
     host: "smtp.gmail.com",
     port: 465,
     secure: true, // Use SSL
+    ignoreTLS: true, // Agrega esta línea para ignorar problemas de validación TLS
+
     auth: {
       user: process.env.NODEMAILER_EMAIL,
       pass: process.env.NODEMAILER_PASS,
@@ -34,8 +36,7 @@ export const POST = async (req) => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Bienvenid@ a este Newsletter</title>
 
-            <!-- imagen en la cabecera -->
-    <img src="cid:bienvenido" alt="Bienvenido" width="480" height="150">
+          
 
             <style>
               body {
@@ -74,7 +75,7 @@ export const POST = async (req) => {
             </style>
           </head>
           <body>
-                <img src="https://www.spanishwithalex.com/images/cards/pedirPerdon.jpg" alt="Bienvenido" width="480" height="150">
+                <img src="https://www.spanishwithalex.com/images/cards/pedirPerdon.jpg" alt="Bienvenido" >
 
             <h1>¡Hey! ¡Te has suscrito!</h1>
             <p>¡Bienvenido, 😃!</p>

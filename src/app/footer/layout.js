@@ -36,10 +36,6 @@ const Footer = () => {
 
   return (
     <Box bg="gray.700" p="4" mt="8" textAlign="center">
-      <Text fontSize="sm">
-        &copy; {new Date().getFullYear()} Spanish with Alex. All rights
-        reserved.
-      </Text>
       <Text fontSize="sm" mt="2">
         <Link href="/legal-terms">Legal Terms</Link>
       </Text>
@@ -83,9 +79,13 @@ const Footer = () => {
               transition: "background-color 0.3s ease",
             }}
           >
-            Subscribe
+            Subscribe for FREE
           </button>
         </form>
+        <Text fontSize="sm">
+          &copy; {new Date().getFullYear()} Spanish with Alex. All rights
+          reserved.
+        </Text>
       </Box>
     </Box>
   );

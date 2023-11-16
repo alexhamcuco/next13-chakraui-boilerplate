@@ -30,23 +30,23 @@ const HorizontalCardPrices = () => {
         >
           <Flex direction="column">
             <Text fontSize="6xl" color="orange">
-              $20
+              $1 for 1 year
             </Text>
-            <Text fontSize="sm" mt={2}>
+            {/* <Text fontSize="sm" mt={2}>
               per month
-            </Text>
+            </Text> */}
           </Flex>
           <Flex direction="column">
             <VStack align="start" spacing={4}>
-              <Text> 📌 This is item 1</Text>
+              <Text> 📌 Access to exclusive content</Text>
               <Divider />
-              <Text>📌This is item 2</Text>
+              <Text>📌Discord channel</Text>
               <Divider />
-              <Text>📌 This is item 3</Text>
+              <Text>📌 launch price</Text>
             </VStack>
           </Flex>
           <Flex direction="column">
-            <CustomButton label="Buy" />7 days-free trial
+            <CustomButton label="Subscribe" />
           </Flex>
         </Flex>
       </Container>

@@ -16,7 +16,7 @@ const ContactCard = () => {
       textAlign="center"
     >
       <Flex justifyContent="center">
-        <Text color="red">Social Media</Text>
+        <Text color="red">SOCIAL MEDIA</Text>
       </Flex>
       <Text>
         If you want to have access to free materials, and educative pills,

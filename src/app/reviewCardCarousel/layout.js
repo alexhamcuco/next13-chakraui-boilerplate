@@ -30,7 +30,7 @@ function ReviewCardCarousel() {
   return (
     <Box>
       <Flex justifyContent="center">
-        <Text color="red">Good words from my students</Text>
+        <Text color="red">REVIEWS</Text>
       </Flex>
       <Carousel>
         {reviews.map((review) => (

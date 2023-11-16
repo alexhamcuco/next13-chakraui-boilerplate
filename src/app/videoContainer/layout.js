@@ -17,7 +17,7 @@ const VideoContainer = () => {
       <Flex direction={{ base: "column", md: "row" }}>
         <Box>
           <Text color="red" mb={2} display={{ base: "block", md: "none" }}>
-            Enunciado
+            MY MOTIVATION
           </Text>
           <Flex justifyContent={"center"}>
             <Image src="\images\video.png" alt="Imagen de Goku" mb={4} />
@@ -30,15 +30,18 @@ const VideoContainer = () => {
             display={{ base: "none", md: "block" }}
             justifyContent={"center"}
           >
-            Enunciado
+            MY MOTIVATION
           </Text>
           <Heading fontSize="2xl" mb={4}>
-            Spanish with Alex
+            A very personal Project
           </Heading>
           <Text mb={6}>
-            Welcome to Spanish with Alex, your Spanish Academy Online. Here you
-            can book personalised classes, check out my courses and study using
-            my own and exclusive materials. 7 days-free trial
+            Welcome to Spanish with Alex,😊 I build this web to help students
+            who want to learn Spanish. This is going to be a organic and
+            personal website where your opinion it is going to play a very
+            important part. I have
+            putted a ton of work into it, and I very exited to share it with
+            you, I hope you enjoy it. Thank you for being here! de corazón.❤
           </Text>
         </Flex>
       </Flex>
