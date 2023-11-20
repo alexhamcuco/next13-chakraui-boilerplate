@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Box, Text, Link, FormControl, Input } from "@chakra-ui/react";
+
 import axios from "axios";
+
+
+
+
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -33,7 +38,7 @@ const Footer = () => {
       setShowMessage(false);
     }, 4000);
   }
-
+console.log(email)
   return (
     <Box bg="gray.700" p="4" mt="8" textAlign="center">
       <Text fontSize="sm" mt="2">
@@ -67,6 +72,7 @@ const Footer = () => {
           </FormControl>
           <button
             type="submit"
+            disabled={!!email}
             style={{
               marginLeft: "4px",
               border: "2px solid red",
