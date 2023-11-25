@@ -19,8 +19,9 @@ const ContactCard = () => {
         <Text color="red">SOCIAL MEDIA</Text>
       </Flex>
       <Text>
-        If you want to have access to free materials, and educative pills,
-        follow me on social media and join the "familia".
+        Do you want free materials that keep you motivated? 
+        Follow me on social media and get regular content. 
+        ¡Vamos allá! 
       </Text>
       <Image
         src="/images/contact_img.png"

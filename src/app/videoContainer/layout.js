@@ -36,12 +36,11 @@ const VideoContainer = () => {
             A very personal Project
           </Heading>
           <Text mb={6}>
-            Welcome to Spanish with Alex,😊 I build this web to help students
-            who want to learn Spanish. This is going to be a organic and
-            personal website where your opinion it is going to play a very
-            important part. I have
-            putted a ton of work into it, and I very exited to share it with
-            you, I hope you enjoy it. Thank you for being here! de corazón.❤
+            Welcome to my house,First of all I want to Thank you,
+            Thanks for being here! de TODO corazón.❤ and secondly, I hope you like it, mainly because I putted a ton of work, care and
+            years into this 😅 jajaja . I would love if you be on more in this very personal project,
+            mi casa es su casa. and  your opinion
+            is very important. a Big thank you and , vamos allá! 
           </Text>
         </Flex>
       </Flex>

@@ -16,7 +16,7 @@ const ConversationZoom = () => {
     >
       <Flex direction={{ base: "column", md: "row-reverse" }}>
         <Text color="red" mb={2} display={{ base: "block", md: "none" }}>
-          TUTORING
+          START TALKING TODAY
         </Text>
         <Flex justifyContent={"center"}>
           <Image
@@ -31,15 +31,15 @@ const ConversationZoom = () => {
             display={{ base: "none", md: "block" }}
             justifyContent={"center"}
           >
-            Enunciado
+            START TALKING TODAY
           </Text>
           <Heading fontSize="2xl" mb={4}>
-            Start talking now!
+            Book a lesson now!
           </Heading>
           <Text mb={4}>
-            I have been teaching for more than ten years now, time flies, adults, children, all levels, 
-            exams preparations and conversational skills, if you want to book a lesson 
-            with you can start today!
+            I have been teaching for more than ten years now,
+            adults and children, all levels, exams preparations and conversational spanish.
+     If you want my help just book a lesson and lets start today!
           </Text>
           <CustomButton label="Book a lesson" onClick={showAlert} />
         </Flex>
