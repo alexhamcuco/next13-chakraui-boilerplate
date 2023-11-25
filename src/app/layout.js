@@ -5,6 +5,7 @@ import { CacheProvider } from "@chakra-ui/next-js";
 import { ChakraProvider } from "@chakra-ui/react";
 import Footer from "./footer/layout";
 import NavbarLayout from "./navbarLayout/layout";
+import theme from "@/theme/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <CacheProvider>
-          <ChakraProvider>
+          <ChakraProvider theme={theme}>
             {/* <NavbarLayout /> */}
             {children}
             <Footer />

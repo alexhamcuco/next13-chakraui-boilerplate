@@ -6,14 +6,21 @@ import {
   Text,
   VStack,
   Divider,
-  Button,
   Container,
+  useColorModeValue,
+  Box,
 } from "@chakra-ui/react";
 import CustomButton from "../customButton/layout";
+import { useTheme } from "@emotion/react";
 
 const HorizontalCardPrices = () => {
+  const { colors } = useTheme();
+
   return (
-    <div>
+    <Box
+      border={useColorModeValue(colors.light.border, colors.dark.border)}
+      bg={useColorModeValue(colors.light.bgSecondary, colors.dark.bgSecondary)}
+    >
       <Container
         mt={9}
         textAlign={"center"}
@@ -50,7 +57,7 @@ const HorizontalCardPrices = () => {
           </Flex>
         </Flex>
       </Container>
-    </div>
+    </Box>
   );
 };
 

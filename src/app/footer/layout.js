@@ -1,15 +1,22 @@
 import React, { useState } from "react";
-import { Box, Text, Link, FormControl, Input } from "@chakra-ui/react";
-
-import axios from "axios";
-
-
-
-
+import {
+  Box,
+  Text,
+  Link,
+  FormControl,
+  Input,
+  Button,
+  Alert,
+  AlertIcon,
+} from "@chakra-ui/react";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [showMessage, setShowMessage] = useState(false);
+
+  const isValidEmail = () => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -38,7 +45,7 @@ const Footer = () => {
       setShowMessage(false);
     }, 4000);
   }
-console.log(email)
+
   return (
     <Box bg="gray.700" p="4" mt="8" textAlign="center">
       <Text fontSize="sm" mt="2">
@@ -70,7 +77,15 @@ console.log(email)
               p="2"
             />
           </FormControl>
-          <button
+          {email && !isValidEmail() && (
+            <Text fontSize="sm" color="red">
+              Please enter a valid email address
+            </Text>
+          )}
+          <Button type="submit" colorScheme="red" isDisabled={!isValidEmail()}>
+            Subscribe for FREE
+          </Button>
+          {/* <button
             type="submit"
             disabled={!!email}
             style={{
@@ -86,7 +101,7 @@ console.log(email)
             }}
           >
             Subscribe for FREE
-          </button>
+          </button> */}
         </form>
         <Text fontSize="sm">
           &copy; {new Date().getFullYear()} Spanish with Alex. All rights
