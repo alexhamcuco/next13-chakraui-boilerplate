@@ -1,14 +1,10 @@
-import React from 'react'
-import Nav from '../navbar/layout'
-import { getMateriales } from '../lib/api'
+import { getMateriales } from "../lib/api";
+import Navbar from "../navbar/layout";
 
 const NavbarLayout = async () => {
- const materiales = await getMateriales()
-  
- 
- return (
-<Nav materiales={materiales}/>
-  )
-}
+  const materiales = await getMateriales();
 
-export default NavbarLayout
+  return <Navbar materiales={materiales} />;
+};
+
+export default NavbarLayout;

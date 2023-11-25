@@ -1,32 +1,37 @@
+"use client";
+
 import { Box, Image, Text, Flex, Center, Button } from "@chakra-ui/react";
 
 const HorizontalCard = () => {
   return (
-  
-    <Center h="50vh" w="100%"> {/* Centrar la tarjeta horizontalmente y ajustar la altura */}
+    <Center h="20vh" w="100%">
+      {" "}
+      {/* Centrar la tarjeta horizontalmente y ajustar la altura */}
       <Box
-        maxW="50%" /* Establecer el ancho de la tarjeta en 50% */
+        maxW="100%" /* Establecer el ancho de la tarjeta en 50% */
         borderWidth="1px"
         borderRadius="lg"
+        borderColor="red.500"
         overflow="hidden"
         boxShadow="lg" /* Agregar una sombra para mejorar la apariencia */
         flexDirection="row" /* Alinear los elementos horizontalmente */
       >
         <Flex p="4" alignItems="center">
           <Text fontSize="xl" fontWeight="bold">
-            Card Title
+            Suscríbete y...
           </Text>
           <Text ml="4">Join el club!</Text>
           <Button
             ml="4"
-            bg="red.500"
-            color="white"
-            borderRadius="full"
+            border="2px solid red"
+            color="red"
+            display="inline-block"
             _hover={{
-              bg: "red.600",
+              bg: "red.500",
+              color: "white",
             }}
           >
-            Button
+            Get Started!
           </Button>
         </Flex>
       </Box>
