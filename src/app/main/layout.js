@@ -2,7 +2,7 @@
 
 import { Flex } from "@chakra-ui/react";
 import Header from "../header/layout";
-import HorizontalCard from "../horizontalCard/layout";
+// import HorizontalCard from "../horizontalCard/layout";
 import VideoContainer from "@/app/videoContainer/layout";
 import HorizontalCardPrices from "../horinzontalCardPrices/layout";
 import ReviewCardCarousel from "../reviewCardCarousel/layout";
@@ -17,7 +17,7 @@ export const Main = () => {
     <Flex direction="column">
       <NavbarLayout />
       <Header />
-      <HorizontalCard />
+      {/* <HorizontalCard /> */}
       <VideoContainer />
       <HorizontalCardPrices />
       <ConversationZoom />

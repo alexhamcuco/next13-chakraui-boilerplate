@@ -21,15 +21,17 @@ import {
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 import "./Navbar.css";
+import { useTheme } from "@emotion/react";
 
 const Navbar = ({ materiales }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   const uniqueTypes = [...new Set(materiales.map((material) => material.tipo))];
+  const { colors } = useTheme();
 
   return (
     <Box
-      bg={useColorModeValue("gray.100", "gray.900")}
+      bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}
       px={4}
       position="fixed" // Esta línea fija la posición de la barra de navegación
       width="100%"
