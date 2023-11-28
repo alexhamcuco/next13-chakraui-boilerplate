@@ -25,7 +25,7 @@ const VideoContainer = () => {
         <Flex direction={{ base: "column", md: "row" }}>
           <Box>
             <Text color="red" mb={2} display={{ base: "block", md: "none" }}>
-              MY MOTIVATION
+              MOTIVATION
             </Text>
             <Flex justifyContent={"center"}>
               <Image src="\images\video.png" alt="Imagen de Goku" mb={4} />
@@ -38,43 +38,29 @@ const VideoContainer = () => {
               display={{ base: "none", md: "block" }}
               justifyContent={"center"}
             >
-              MY MOTIVATION
+              MOTIVATION
             </Text>
             <Heading fontSize="2xl" mb={4}>
-              A very personal Project
+              Your personal Teacher online.
             </Heading>
             <Text mb={6}>
-              Welcome to Spanish with Alex,😊 I build this web to help students
-              who want to learn Spanish. This is going to be a organic and
-              personal website where your opinion it is going to play a very
-              important part. I have putted a ton of work into it, and I very
-              exited to share it with you, I hope you enjoy it. Thank you for
-              being here! de corazón.❤
+              Welcome to{" "}
+              <strong style={{ fontWeight: "bold" }}>Spanish with Alex </strong>
+              😊 I have created this web to{" "}
+              <strong style={{ fontWeight: "bold" }}>help</strong> students from
+              all countries who want to learn{" "}
+              <strong style={{ fontWeight: "bold" }}>Spanish</strong>. This is a
+              website where your opinion it is going to play a very important
+              role. I have putted a ton of work into it, and I very exited to
+              share it with you. I hope you like it and that you learn a lot 💪. Thank
+              you for being here!
+              <span style={{ fontStyle: "italic" }}> de corazón</span> ❤.{" "}
+              <strong style={{ fontWeight: "bold" }}>Alex</strong>
             </Text>
+            <CustomButton label="Learn More" />
           </Flex>
         </Flex>
-        <Flex direction={"column"}>
-          <Text
-            color="red"
-            mb={2}
-            display={{ base: "none", md: "block" }}
-            justifyContent={"center"}
-          >
-            MY MOTIVATION
-          </Text>
-          <Heading fontSize="2xl" mb={4}>
-            A very personal Project
-          </Heading>
-          <Text mb={6}>
-            Welcome to my house,First of all I want to Thank you, Thanks for
-            being here! de TODO corazón.❤ and secondly, I hope you like it,
-            mainly because I putted a ton of work, care and years into this 😅
-            jajaja . I would love if you be on more in this very personal
-            project, mi casa es su casa. and your opinion is very important. a
-            Big thank you and , vamos allá!
-          </Text>
-        </Flex>
-        <CustomButton label="Learn More" />
+        <Flex direction={"column"}></Flex>
       </Container>
     </Box>
   );

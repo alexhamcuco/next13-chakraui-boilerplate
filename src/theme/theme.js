@@ -5,12 +5,12 @@ const theme = extendTheme({
     light: {
       bgPrimary: "#fefffe",
       bgSecondary: "#f3f3f3",
-      border: "#fefffe",
+      border: "#b6b6b6",
     },
     dark: {
       bgPrimary: "#020919",
       bgSecondary: "#0d1321",
-      border: "#111724",
+      border: "#30353f",
     },
   },
   fonts: {},

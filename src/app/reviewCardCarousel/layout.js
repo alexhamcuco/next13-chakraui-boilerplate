@@ -3,16 +3,18 @@
 "use client";
 
 import React from "react";
-import { Box, Text, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex, useColorModeValue } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ReviewCard from "../reviewCard/layout";
+import { useTheme } from "@emotion/react";
+
 
 const reviews = [
   {
     id: 1,
-    text: "⭐⭐⭐⭐⭐ 5/5 Excelente servicio al cliente. ¡Recomiendo totalmente!",
-    author: "Juan Pérez",
+    text: "⭐⭐⭐⭐⭐ 5/5  Método excelente. ¡Recomiendo totalmente!",
+    author: "Michael Knight",
   },
   {
     id: 2,
@@ -27,8 +29,10 @@ const reviews = [
 ];
 
 function ReviewCardCarousel() {
+    const { colors } = useTheme();
+
   return (
-    <Box>
+    <Box bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}>
       <Flex justifyContent="center">
         <Text color="red">REVIEWS</Text>
       </Flex>

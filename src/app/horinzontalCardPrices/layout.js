@@ -17,10 +17,7 @@ const HorizontalCardPrices = () => {
   const { colors } = useTheme();
 
   return (
-    <Box
-      border={useColorModeValue(colors.light.border, colors.dark.border)}
-      bg={useColorModeValue(colors.light.bgSecondary, colors.dark.bgSecondary)}
-    >
+    <Box bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}>
       <Container
         mt={9}
         textAlign={"center"}
@@ -34,6 +31,14 @@ const HorizontalCardPrices = () => {
           boxShadow="2xl"
           justifyContent="space-around"
           alignItems="center"
+          bg={useColorModeValue(
+            colors.light.bgSecondary,
+            colors.dark.bgSecondary
+          )}
+          borderColor={useColorModeValue(
+            colors.light.border,
+            colors.dark.border
+          )}
         >
           <Flex direction="column">
             <Text fontSize="6xl" color="orange">

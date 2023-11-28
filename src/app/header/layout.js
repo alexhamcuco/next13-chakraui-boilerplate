@@ -15,7 +15,9 @@ const Header = () => {
   const { colors } = useTheme();
 
   return (
-    <Box bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}>
+    <Box
+      bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}
+    >
       <Container
         mt={24}
         textAlign={"center"}
@@ -36,7 +38,7 @@ const Header = () => {
             colors.light.border,
             colors.dark.border
           )}
-          borderWidth={2}
+          borderWidth="1px"
           borderRadius={18}
           boxShadow="2xl"
           bg={useColorModeValue(

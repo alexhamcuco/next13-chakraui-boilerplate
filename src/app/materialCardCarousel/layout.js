@@ -1,10 +1,11 @@
 //npm install pure-react-carousel
 //npm audit fix
 
-import { Container, Flex, Text } from "@chakra-ui/react";
+import { Container, Flex, Text, Box,  useColorModeValue } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import MaterialCard from "../materialCard/layout";
+import { useTheme } from "@emotion/react";
 
 const reviews = [
   {
@@ -25,7 +26,11 @@ const reviews = [
 ];
 
 function MaterialCardCarousel() {
+  const {colors} = useTheme()
+
   return (
+        <Box bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}>
+
     <Container
       mt={14}
       textAlign={"center"}
@@ -41,6 +46,7 @@ function MaterialCardCarousel() {
         ))}
       </Carousel>
     </Container>
+    </Box>
   );
 }
 

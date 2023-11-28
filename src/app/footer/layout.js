@@ -73,7 +73,16 @@ const Footer = () => {
               Please enter a valid email address
             </Text>
           )}
-          <Button type="submit" colorScheme="red" isDisabled={!isValidEmail()}>
+          <Button
+            type="submit"
+            colorScheme="red"
+            color="red"
+            _hover={{
+              bg: "red.500",
+              color: "white",
+            }}
+            isDisabled={!isValidEmail()}
+          >
             Subscribe for FREE
           </Button>
           {/* <button

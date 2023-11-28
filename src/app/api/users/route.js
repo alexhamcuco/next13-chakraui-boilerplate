@@ -77,7 +77,7 @@ export const POST = async (req) => {
           <body>
                 <img src="https://www.spanishwithalex.com/images/cards/pedirPerdon.jpg" alt="Bienvenido" >
 
-            <h1>¡Hey! ¡Te has suscrito!</h1>
+            <h1>¡Hey!😊 ¡Te has suscrito!</h1>
             <p>¡Bienvenido, 😃!</p>
             <p class="first-paragraph">Y antes de nada, decir que yo no soy filólogo ni lingüista, pero conozco mi lengua materna bien y, lo más importante, creo que soy bueno enseñándola.</p>
 <p>Soy licenciado en pedagogía y tengo un Máster de enseñanza de español.</p>
