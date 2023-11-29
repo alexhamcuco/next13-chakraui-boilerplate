@@ -25,7 +25,7 @@ const VideoContainer = () => {
         <Flex direction={{ base: "column", md: "row" }}>
           <Box>
             <Text color="red" mb={2} display={{ base: "block", md: "none" }}>
-              MOTIVATION
+              PRESENTATION
             </Text>
             <Flex justifyContent={"center"}>
               <Image src="\images\video.png" alt="Imagen de Goku" mb={4} />
@@ -38,13 +38,13 @@ const VideoContainer = () => {
               display={{ base: "none", md: "block" }}
               justifyContent={"center"}
             >
-              MOTIVATION
+              PRESENTATION
             </Text>
             <Heading fontSize="2xl" mb={4}>
               Your personal Teacher online.
             </Heading>
             <Text mb={6}>
-              Welcome to{" "}
+              ¡HOLA! Welcome to{" "}
               <strong style={{ fontWeight: "bold" }}>Spanish with Alex </strong>
               😊 I have created this web to{" "}
               <strong style={{ fontWeight: "bold" }}>help</strong> students from
@@ -52,8 +52,8 @@ const VideoContainer = () => {
               <strong style={{ fontWeight: "bold" }}>Spanish</strong>. This is a
               website where your opinion it is going to play a very important
               role. I have putted a ton of work into it, and I very exited to
-              share it with you. I hope you like it and that you learn a lot 💪. Thank
-              you for being here!
+              share it with you. I hope you like it and that you learn a lot 💪.
+              Thank you for being here!
               <span style={{ fontStyle: "italic" }}> de corazón</span> ❤.{" "}
               <strong style={{ fontWeight: "bold" }}>Alex</strong>
             </Text>
