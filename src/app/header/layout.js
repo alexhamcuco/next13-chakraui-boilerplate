@@ -25,7 +25,7 @@ const Header = () => {
       >
         <Flex justifyContent={"center"}>
           <Image
-            src="/images/banner_img.png"
+            src="/images/banner_img2.png"
             alt="Imagen de Alex"
             width="400"
             height="0"

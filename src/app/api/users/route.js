@@ -52,6 +52,9 @@ export const POST = async (req) => {
 
               p {
                 margin-bottom: 15px;
+                  border: 1px solid #ccc; /* Agrega un borde gris fino */
+        border-radius: 5px; /* Bordes redondeados */
+        padding: 10px; /* Espaciado interno */
               }
 
               .highlight {
@@ -77,26 +80,25 @@ export const POST = async (req) => {
           <body>
                 <img src="https://www.spanishwithalex.com/images/cards/pedirPerdon.jpg" alt="Bienvenido" >
 
-            <h1>¡Hey!😊 ¡Te has suscrito!</h1>
-            <p>¡Bienvenido, 😃!</p>
-            <p class="first-paragraph">Y antes de nada, decir que yo no soy filólogo ni lingüista, pero conozco mi lengua materna bien y, lo más importante, creo que soy bueno enseñándola.</p>
-<p>Soy licenciado en pedagogía y tengo un Máster de enseñanza de español.</p>
+            <h1>¡Hey!😊 ¡Te has suscrito! ¡Bienvenid@, 😃!</h1>
+            <p></p>
+            <p class="first-paragraph">Antes de nada, puedes confirmar tu email.  </p>
 
 <!-- botón personalizado -->
 
           <button style="ml: 4px; border: 2px solid red; color: red; width: auto; cursor: pointer; background-color: white; padding: 8px 16px; border-radius: 4px;">
             <a href="https://www.spanishwithalex.com/" style="text-decoration: none; color: red;">
-              Confirma tu correo
+              Confirmation email
             </a>
           </button>
 
-<p>¿Qué significa esta titulitis…? Poco, la verdad. Para decirte la verdad, aprendí más de la educación fuera de la carrera. Cualifican que estoy cualificado* (con tono divertido).</p>
+<p>¿Qué significa esta titulitis…? Poco, la verdad. Para decirte la verdad, aprendí más de la educación fuera de la carrera. Cualifican que estoy cualificado* (con tono divertido).
 
-<p>También, para tener clases juntos, es importante que te caiga un mínimo de bien. :) Y tienes que conocerme. Porque vamos a hablar, y hablar mucho. Y si posiblemente que cuente un poco de mi vida :)</p>
+También, para tener clases juntos, es importante que te caiga un mínimo de bien. :) Y tienes que conocerme. Porque vamos a hablar, y hablar mucho. Y si posiblemente que cuente un poco de mi vida :)
 
-<p>Bueno…o .mucho…jajaj me encanta…las graciosas. (Tirado en la cama, de k hablo con.., ejercicios corregidos…clase. Cambia) Siempre hago clases más amenas.</p>
+Bueno…o .mucho…jajaj me encanta…las graciosas. (Tirado en la cama, de k hablo con.., ejercicios corregidos…clase. Cambia) Siempre hago clases más amenas.
 
-<p>Si quieres clases para tu hijo, tengo experiencia previa con muy buenos resultados. Mi máster fueron mis trabajos anteriores y mis hobbies un poco reflejan mi manera de enseñanza.</p>
+Si quieres clases para tu hijo, tengo experiencia previa con muy buenos resultados. Mi máster fueron mis trabajos anteriores y mis hobbies un poco reflejan mi manera de enseñanza.</p>
 
 <ul>
   <li>Entrenador - Push the student as much as you can.</li>
