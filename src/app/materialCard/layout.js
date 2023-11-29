@@ -1,8 +1,11 @@
 "use client";
 
-import { Box, Text, Flex, Center } from "@chakra-ui/react";
+import { Box, Text, Flex, Center, useColorModeValue } from "@chakra-ui/react";
+import { useTheme } from "@emotion/react";
 
 const MaterialCard = ({ review }) => {
+        const { colors } = useTheme();
+
   return (
     <Center h="15vh" w="100%">
       <Box
@@ -14,6 +17,10 @@ const MaterialCard = ({ review }) => {
         boxShadow="lg"
         flexDirection="row"
         display="flex"
+        bg={useColorModeValue(
+          colors.light.bgTranspLight,
+          colors.dark.bgTranspDark
+        )}
       >
         <Flex p="4" alignItems="center" flex="1">
           <Text fontSize="xl" fontWeight="bold">

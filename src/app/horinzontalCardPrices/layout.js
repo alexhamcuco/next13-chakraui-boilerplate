@@ -50,11 +50,11 @@ const HorizontalCardPrices = () => {
           </Flex>
           <Flex direction="column">
             <VStack align="start" spacing={4}>
-              <Text> 📌 Access to exclusive content</Text>
+              <Text> 📌 Access to the Exclusive content</Text>
               <Divider />
               <Text>📌Discord channel</Text>
               <Divider />
-              <Text>📌 launch price</Text>
+              <Text>📌 Telegram group</Text>
             </VStack>
           </Flex>
           <Flex direction="column">
