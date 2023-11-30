@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import {
   Flex,
@@ -17,12 +15,17 @@ const HorizontalCardPrices = () => {
   const { colors } = useTheme();
 
   return (
-    <Box bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}>
+    <Box
+      bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}
+      p="8 "
+    >
       <Container
         mt={9}
         textAlign={"center"}
         maxW={{ base: "container.sm", md: "6xl" }}
       >
+                <Box p="49">
+
         <Flex
           flexDirection={{ base: "column", md: "row" }}
           borderWidth="1px"
@@ -39,6 +42,7 @@ const HorizontalCardPrices = () => {
             colors.light.border,
             colors.dark.border
           )}
+          p="8"
         >
           <Flex direction="column">
             <Text fontSize="6xl" color="orange">
@@ -50,7 +54,7 @@ const HorizontalCardPrices = () => {
           </Flex>
           <Flex direction="column">
             <VStack align="start" spacing={4}>
-              <Text> 📌 Access to the Exclusive content</Text>
+              <Text> 📌 Access to all Exclusive content</Text>
               <Divider />
               <Text>📌Discord channel</Text>
               <Divider />
@@ -61,6 +65,7 @@ const HorizontalCardPrices = () => {
             <CustomButton label="Subscribe" />
           </Flex>
         </Flex>
+        </Box>
       </Container>
     </Box>
   );

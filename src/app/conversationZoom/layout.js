@@ -32,7 +32,7 @@ const ConversationZoom = () => {
           </Text>
           <Flex justifyContent={"center"}>
             <Image
-              src="images\calander_img.png"
+              src="images\calander_img1.png"
               alt="Alex talking with student"
             />
           </Flex>

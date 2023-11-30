@@ -31,7 +31,11 @@ const VideoContainer = () => {
               PRESENTATION
             </Text>
             <Flex justifyContent={"center"}>
-              <Image src="\images\video.png" alt="Imagen de Goku" mb={4} />
+              <Image
+                src="\images\calander_img 2.png"
+                alt="Imagen de Alex "
+                mb={4}
+              />
             </Flex>
           </Box>
           <Flex

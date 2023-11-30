@@ -25,7 +25,7 @@ const Header = () => {
       >
         <Flex justifyContent={"center"}>
           <Image
-            src="/images/banner_img2.png"
+            src="/images/banner_img3.png"
             alt="Imagen de Alex"
             width="400"
             height="0"
@@ -51,7 +51,7 @@ const Header = () => {
           py={8}
           // px={12}
         >
-          <Flex justifyContent={"space-between"}>
+          <Flex justifyContent={"space-between"} >
             <Flex direction={"column"}>
               <Text fontSize="1xl">Sessions</Text>
               <Text fontSize="6xl">10</Text>

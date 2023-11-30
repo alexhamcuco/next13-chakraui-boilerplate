@@ -62,7 +62,7 @@ function MaterialCardCarousel() {
         <Flex justifyContent="center">
           <Text color="red">LATEST CONTENT</Text>
         </Flex>
-        <Text>Enjoy the latest content now!</Text>
+        <Text>Enjoy fresh materials!</Text>
         <Carousel>
           {reviews.map((review) => (
             <MaterialCard key={review.id} review={review} />
