@@ -45,12 +45,12 @@ const HorizontalCardPrices = () => {
           p="8"
         >
           <Flex direction="column">
-            <Text fontSize="6xl" color="orange">
-              $1 for 1 year
+            <Text fontSize="8xl" color="orange">
+              $20 
             </Text>
-            {/* <Text fontSize="sm" mt={2}>
+            <Text fontSize="sm" mt={2}>
               per month
-            </Text> */}
+            </Text>
           </Flex>
           <Flex direction="column">
             <VStack align="start" spacing={4}>

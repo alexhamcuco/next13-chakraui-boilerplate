@@ -55,7 +55,7 @@ const VideoContainer = () => {
               Your personal Teacher online.
             </Heading>
             <Text mb={6}>
-              ¡Hi! Welcome to{" "}
+              Hi! Welcome to{" "}
               <strong style={{ fontWeight: "bold" }}>Spanish with Alex </strong>
               😊 I have created this web to{" "}
               <strong style={{ fontWeight: "bold" }}>help</strong> students from
