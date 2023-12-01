@@ -103,7 +103,7 @@
     flex-grow: 1;
 }
 
-.card_third_div div {
+.card_third_div > div {
     padding: 15px 10px;
 }
 
@@ -115,12 +115,12 @@
 
 .card_third_div_first p {
     font-size: 20px;
-    color: white;
+    /* color: white; */
 }
 
 .card_third_div_first input {
     width: 50px;
-    background-color: white;
+    /* background-color: white; */
     color: black;
 }
 
@@ -136,7 +136,7 @@
     padding: 10px 0;
     width: 150px;
     font-size: 14px;
-    color: white;
+    /* color: white; */
     border-radius: 100px;
     border: 2px solid #f8180e;
 }
