@@ -28,7 +28,7 @@ const ReviewCard = ({ review }) => {
       >
         <Flex p="4" alignItems="center" flex="1">
           <Text fontSize="xl" fontWeight="bold">
-            "{review.text}"
+            {review.text}
           </Text>
           <Text ml="4">- {review.author}</Text>
         </Flex>
