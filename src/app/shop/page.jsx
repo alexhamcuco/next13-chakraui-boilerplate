@@ -188,7 +188,7 @@ const ShopPage = () => {
                       </div>
                       <div className="card_third_div_second">
                         <p>T-Shirt</p>
-                        <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+                        <div className="sizes_main">
                           <p>SIZE:</p>
                           <div style={{ display: 'flex', gap: '10px' }}>
                             {

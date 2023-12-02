@@ -142,6 +142,12 @@
 }
 
 
+.sizes_main{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 
 @media (max-width:1400px) {
     .container {
@@ -161,13 +167,19 @@
     .card_main {
         flex-direction: column;
         gap: 20px;
+        padding: 15px;
+        width: 95%;
     }
 
     .card_first_div {
-        width: 250px;
+        width: 220px;
     }
 
     .card_third_div {
         width: 100%;
+    }
+
+    .card_third_div > div {
+        padding: 15px 0px;
     }
 }
