@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 import { useColorMode } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
 import toast, { Toaster } from 'react-hot-toast';
+import ShopPage2 from "../shop2/layout";
 
 
 
@@ -19,18 +20,18 @@ const ShopPage = () => {
   let data = [
     {
       id: 1,
-      name: 'CUP VERBS',
-      price: 20,
+      name: 'CAMISETAS',
+      price: 25,
       images: [
-        '/images/shop.jpg',
-        '/images/shop.jpg',
-        '/images/shop.jpg'
+        '/images/cami1.jpg',
+        '/images/cami2.jpg',
+        '/images/cami3.jpg'
       ],
       sizes: ["S", "MD", "X", "XL"]
     },
     {
       id: 2,
-      name: 'CUP VERBS',
+      name: 'SUDADERAS',
       price: 20,
       images: [
         '/images/shop.jpg',
@@ -41,7 +42,7 @@ const ShopPage = () => {
     },
     {
       id: 3,
-      name: 'CUP VERBS',
+      name: 'TARJETAS FRASES',
       price: 20,
       images: [
         '/images/shop.jpg',
@@ -91,10 +92,35 @@ const ShopPage = () => {
 
   const addToCart = (item) => {
     let selectedSize = size.filter((i) => i.id === item.id)
+        let quantity = parseInt(document.getElementById(`quantity-${item.id}`).value);
+
     console.log(selectedSize);
     if (!selectedSize.length) {
-      alert("Please select a size")
+      // alert("Please select a size")
+       toast.error('Por favor, selecciona un tamaño', {
+      position: 'top-center',
+      style: {
+        backgroundColor: '#FF6347',
+        color: 'white',
+        padding: '15px',
+        fontSize: '16px',
+        fontWeight: 'bold'
+      }
+    });
       return
+    }
+     if (isNaN(quantity) || quantity <= 0) {
+      toast.error('Por favor, introduce una cantidad válida', {
+        position: 'top-center',
+        style: {
+          backgroundColor: '#FF6347',
+          color: 'white',
+          padding: '15px',
+          fontSize: '16px',
+          fontWeight: 'bold'
+        }
+      });
+      return;
     }
     let oldValue = localStorage.getItem('cartItems')
     let exists = false
@@ -120,15 +146,20 @@ const ShopPage = () => {
       image: item.images[0]
     }]
     localStorage.setItem('cartItems', JSON.stringify(newValue))
-    toast.success('Product added successfully', {
-      position: window.matchMedia("(min-width: 600px)").matches ? "bottom-right" : "bottom-center",
-      style: {
-        backgroundColor: '#d9d9d9',
-        padding: window.matchMedia("(min-width: 600px)").matches ? "20px 30px" : "15px 20px",
-        fontSize: '14px',
-        fontWeight: 'bold'
-      },
-    });
+    toast.success(`${quantity} ${item.name} añadido al carrito`, {
+  position: window.innerWidth > 600 ? "top-center" : "top-center",
+  style: {
+    backgroundColor: '#32CD32',
+    color: 'white',
+    padding: window.innerWidth > 600 ? "20px 30px" : "15px 20px",
+    fontSize: '16px',
+    fontWeight: 'bold'
+  },
+});
+  
+    
+ 
+
   }
 
   function getCartData() {
@@ -184,7 +215,7 @@ const ShopPage = () => {
                     <div className="card_third_div">
                       <div className="card_third_div_first">
                         <p>Quantity: </p>
-                        <input type="number" style={colorMode === 'light' ? { backgroundColor: 'lightgrey' } : { backgroundColor: 'white' }} />
+                <input id={`quantity-${item.id}`} type="number" style={colorMode === 'light' ? { backgroundColor: 'lightgrey' } : { backgroundColor: 'white' }} />
                       </div>
                       <div className="card_third_div_second">
                         <p>T-Shirt</p>
@@ -212,6 +243,8 @@ const ShopPage = () => {
           }
         </div>
       </div>
+            <ShopPage2/>
+ 
     </>
   );
 };
