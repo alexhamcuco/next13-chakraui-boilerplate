@@ -47,7 +47,7 @@ function MaterialCardCarousel() {
         top={0}
         width="100%"
         height="100%"
-        left={{ base: "150px", md: "300px" }}
+        // left={{ base: "150px", md: "300px" }}
         transform="rotateY(180deg)"
       />
 

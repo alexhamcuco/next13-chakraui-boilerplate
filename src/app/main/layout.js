@@ -15,7 +15,7 @@ import NavbarLayout from "../navbarLayout/layout";
 export const Main = () => {
   return (
     <Flex direction="column">
-      <NavbarLayout />
+      {/* <NavbarLayout /> */}
       <Header />
       {/* <HorizontalCard /> */}
       <VideoContainer />

@@ -44,7 +44,7 @@ function ReviewCardCarousel() {
       />
 
       {/* Content Layer */}
-      <Box position="relative" zIndex={2}>
+      <Box position="relative" zIndex={1}>
         <Flex justifyContent="center">
           <Text color="red">REVIEWS</Text>
         </Flex>

@@ -243,10 +243,11 @@ const ShopPage = () => {
           }
         </div>
       </div>
-            <ShopPage2/>
+      <ShopPage2/>
  
     </>
   );
 };
 
 export default ShopPage;
+
