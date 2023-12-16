@@ -15,9 +15,7 @@ const Header = () => {
   const { colors } = useTheme();
 
   return (
-    <Box
-      bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}
-    >
+    <Box bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}>
       <Container
         mt={24}
         textAlign={"center"}
@@ -25,15 +23,15 @@ const Header = () => {
       >
         <Flex justifyContent={"center"}>
           <Image
-            src="/images/banner_img3.png"
+            src="/images/banner_img2.png"
             alt="Imagen de Alex"
-            width="400"
+            width="1400"
             height="0"
           />
         </Flex>
         <Flex
           direction={{ base: "column", md: "row" }}
-          justifyContent={"space-between"}
+          justifyContent={{ md: "space-around", base: "center" }}
           borderColor={useColorModeValue(
             colors.light.border,
             colors.dark.border
@@ -51,8 +49,8 @@ const Header = () => {
           py={8}
           // px={12}
         >
-          <Flex justifyContent={"space-between"} >
-            <Flex direction={"column"}>
+          <Flex justifyContent={"space-evenly"}>
+            <Flex direction={"column"} justifyContent={"space-evenly"}>
               <Text fontSize="1xl">Sessions</Text>
               <Text fontSize="6xl">10</Text>
             </Flex>
@@ -66,7 +64,7 @@ const Header = () => {
             </Flex>
           </Flex>
           <Flex>
-            <Flex direction={"column"}>
+            <Flex direction={"column"} >
               <Text fontSize="1xl"> ⭐⭐⭐⭐⭐ 5/5 </Text>
               <Text fontSize="1xl">
                 Students give Alex <br /> a good rating. 😊
