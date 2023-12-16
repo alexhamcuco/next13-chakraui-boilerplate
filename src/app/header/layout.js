@@ -6,6 +6,7 @@ import {
   Container,
   useColorModeValue,
   Box,
+  Divider,
 } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
 import Image from "next/image";
@@ -15,9 +16,7 @@ const Header = () => {
   const { colors } = useTheme();
 
   return (
-    <Box
-      bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}
-    >
+    <Box bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}>
       <Container
         mt={24}
         textAlign={"center"}
@@ -33,7 +32,9 @@ const Header = () => {
         </Flex>
         <Flex
           direction={{ base: "column", md: "row" }}
-          justifyContent={"space-between"}
+          p={8}
+          justifyContent={"space-around"}
+          alignItems={"center"}
           borderColor={useColorModeValue(
             colors.light.border,
             colors.dark.border
@@ -49,9 +50,8 @@ const Header = () => {
           position="relative"
           top="-20px"
           py={8}
-          // px={12}
         >
-          <Flex justifyContent={"space-between"} >
+          <Flex gap={{ base: 4 }} width={"60%"} justifyContent={"space-around"}>
             <Flex direction={"column"}>
               <Text fontSize="1xl">Sessions</Text>
               <Text fontSize="6xl">10</Text>
@@ -65,11 +65,23 @@ const Header = () => {
               <Text fontSize="6xl">100</Text>
             </Flex>
           </Flex>
+          <Divider
+            display={{ base: "block", md: "none" }}
+            borderColor={useColorModeValue(
+              colors.light.border,
+              colors.dark.border
+            )}
+            borderWidth="1px"
+            height="auto"
+            mt={2}
+            mb={3}
+          />
           <Flex>
             <Flex direction={"column"}>
               <Text fontSize="1xl"> ⭐⭐⭐⭐⭐ 5/5 </Text>
               <Text fontSize="1xl">
-                Students give Alex <br /> a good rating. 😊
+                Students give Spanish With Alex an <br /> average rating of 4.9
+                out of 5 stars
               </Text>
             </Flex>
           </Flex>
