@@ -1,18 +1,31 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import {
   Flex,
   Text,
   Container,
   useColorModeValue,
   Box,
+  Divider,
 } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
 import Image from "next/image";
-import React from "react";
 
 const Header = () => {
   const { colors } = useTheme();
+  //windows size
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <Box bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}>
@@ -22,16 +35,29 @@ const Header = () => {
         maxW={{ base: "container.sm", md: "6xl" }}
       >
         <Flex justifyContent={"center"}>
-          <Image
-            src="/images/banner_img2.png"
-            alt="Imagen de Alex"
-            width="1400"
-            height="0"
-          />
+          {width >= 768 ? (
+            <Image
+              src="/images/cami2.jpg"
+              alt="Alex"
+              width={200}
+              height={200}
+              layout="fixed"
+            />
+          ) : (
+            <Image
+              src="/images/cami1.jpg"
+              alt="Alex"
+              width={150}
+              height={150}
+              layout="fixed"
+            />
+          )}
         </Flex>
         <Flex
           direction={{ base: "column", md: "row" }}
-          justifyContent={{ md: "space-around", base: "center" }}
+          p={8}
+          justifyContent={"space-around"}
+          alignItems={"center"}
           borderColor={useColorModeValue(
             colors.light.border,
             colors.dark.border
@@ -47,10 +73,9 @@ const Header = () => {
           position="relative"
           top="-20px"
           py={8}
-          // px={12}
         >
-          <Flex justifyContent={"space-evenly"}>
-            <Flex direction={"column"} justifyContent={"space-evenly"}>
+          <Flex gap={{ base: 4 }} width={"60%"} justifyContent={"space-around"}>
+            <Flex direction={"column"}>
               <Text fontSize="1xl">Sessions</Text>
               <Text fontSize="6xl">10</Text>
             </Flex>
@@ -63,11 +88,23 @@ const Header = () => {
               <Text fontSize="6xl">100</Text>
             </Flex>
           </Flex>
+          <Divider
+            display={{ base: "block", md: "none" }}
+            borderColor={useColorModeValue(
+              colors.light.border,
+              colors.dark.border
+            )}
+            borderWidth="1px"
+            height="auto"
+            mt={2}
+            mb={3}
+          />
           <Flex>
             <Flex direction={"column"} >
               <Text fontSize="1xl"> ⭐⭐⭐⭐⭐ 5/5 </Text>
               <Text fontSize="1xl">
-                Students give Alex <br /> a good rating. 😊
+                Students give Spanish With Alex an <br /> average rating of 4.9
+                out of 5 stars
               </Text>
             </Flex>
           </Flex>
