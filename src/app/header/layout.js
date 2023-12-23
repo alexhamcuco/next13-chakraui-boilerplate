@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Flex,
   Text,
@@ -15,7 +15,8 @@ import Image from "next/image";
 const Header = () => {
   const { colors } = useTheme();
   //windows size
-  const [width, setWidth] = React.useState(0);
+  const [width, setWidth] = useState(0);
+
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);

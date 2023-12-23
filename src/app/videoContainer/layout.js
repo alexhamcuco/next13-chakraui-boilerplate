@@ -33,8 +33,6 @@ const VideoContainer = () => {
           />
           <Flex
             direction={"column"}
-            // m={{ base: 0, md: 4 }}
-            // mt={{ base: 4, md: 0 }}
             pl={{ base: 2, md: 20 }}
             pr={{ base: 2, md: 0 }}
             py={{ base: 8, md: 0 }}
@@ -60,10 +58,12 @@ const VideoContainer = () => {
               <span style={{ fontStyle: "italic" }}> de corazón</span> ❤.{" "}
               <strong style={{ fontWeight: "bold" }}>Alex</strong>
             </Text>
-            <CustomButton label="Learn More" />
+            <Box>
+              <CustomButton label="Learn More" />
+              {/* <Button colorScheme="blue">Button</Button> */}
+            </Box>
           </Flex>
         </Flex>
-        <Flex direction={"column"}></Flex>
       </Container>
     </Box>
   );
