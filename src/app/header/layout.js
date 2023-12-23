@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useEffect } from "react";
 import {
   Flex,
   Text,
@@ -10,10 +11,20 @@ import {
 } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
 import Image from "next/image";
-import React from "react";
 
 const Header = () => {
   const { colors } = useTheme();
+  //windows size
+  const [width, setWidth] = React.useState(0);
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <Box bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}>
@@ -23,12 +34,23 @@ const Header = () => {
         maxW={{ base: "container.sm", md: "6xl" }}
       >
         <Flex justifyContent={"center"}>
-          <Image
-            src="/images/banner_img3.png"
-            alt="Imagen de Alex"
-            width="400"
-            height="0"
-          />
+          {width >= 768 ? (
+            <Image
+              src="/images/cami2.jpg"
+              alt="Alex"
+              width={200}
+              height={200}
+              layout="fixed"
+            />
+          ) : (
+            <Image
+              src="/images/cami1.jpg"
+              alt="Alex"
+              width={150}
+              height={150}
+              layout="fixed"
+            />
+          )}
         </Flex>
         <Flex
           direction={{ base: "column", md: "row" }}
