@@ -22,9 +22,9 @@ const VideoContainer = () => {
         maxW={{ base: "container.sm", md: "6xl" }}
         textAlign={"center"}
       >
-        <Flex direction={{ base: "column", md: "row" }}>
+        <Flex direction={{ base: "column", md: "row"}}>
           <Text color="red" mb={2} display={{ base: "block", md: "none" }}>
-            PRESENTATION
+            HOLA AMIGOS
           </Text>
           <Image
             src="\images\calander_img 2.png"
@@ -39,7 +39,7 @@ const VideoContainer = () => {
             textAlign={"left"}
           >
             <Text color="red" mb={2} display={{ base: "none", md: "block" }}>
-              PRESENTATION
+              HOLA AMIGOS
             </Text>
             <Heading fontSize="3xl" mb={4}>
               Your personal Teacher online.

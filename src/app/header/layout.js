@@ -37,17 +37,17 @@ const Header = () => {
         <Flex justifyContent={"center"}>
           {width >= 768 ? (
             <Image
-              src="/images/cami2.jpg"
+              src="/images/banner_img2.png"
               alt="Alex"
-              width={200}
+              width={800}
               height={200}
               layout="fixed"
             />
           ) : (
             <Image
-              src="/images/cami1.jpg"
+              src="/images/banner_img3.png"
               alt="Alex"
-              width={150}
+              width={350}
               height={150}
               layout="fixed"
             />
@@ -100,10 +100,10 @@ const Header = () => {
             mb={3}
           />
           <Flex>
-            <Flex direction={"column"} >
+            <Flex direction={"column"}>
               <Text fontSize="1xl"> ⭐⭐⭐⭐⭐ 5/5 </Text>
               <Text fontSize="1xl">
-                Students give Spanish With Alex an <br /> average rating of 4.9
+                Students give Alex an <br /> average rating of 4.9
                 out of 5 stars
               </Text>
             </Flex>

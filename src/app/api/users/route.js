@@ -28,7 +28,7 @@ export const POST = async (req) => {
     await transporter.sendMail({
       from: process.env.NODEMAILER_EMAIL,
       to: email,
-      subject: "Bienvenid@ a este Newsletter",
+      subject: "Welcome to SWA Newsletter",
       html: `
         <html lang="en">
 <head>
@@ -38,19 +38,19 @@ export const POST = async (req) => {
   <style>
     /* Global styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Comic Sans MS', sans-serif;
       line-height: 1.6;
       margin: 20px;
       color: #333;
     }
 
     h1 {
-      color: #3498db;
+      color: #F8180E;
     }
 
     p {
       margin-bottom: 15px;
-      border: 1px solid #ccc;
+      border: 1px solid #1c1b1b;
       border-radius: 5px;
       padding: 10px;
     }
@@ -64,13 +64,56 @@ export const POST = async (req) => {
       margin-top: 20px;
       color: #7f8c8d;
     }
+/* space */
+   .space {
+      
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px; /* Ajusta el valor según tus necesidades */
+    }
+        /* Cursive text */
+        .cursive {
+            font-family: cursive;
+        }
 
+        /* Bold text */
+        .bold {
+            font-weight: bold;
+        }
+
+        /* Underline text */
+        .underline {
+            text-decoration: underline;
+        }
+
+            .button {
+                margin-left: 4px;
+                border: 2px solid red;
+                color: red;
+                width: auto;
+                cursor: pointer;
+                background-color: white;
+                padding: 8px 16px;
+                border-radius: 4px;
+                /* Added padding inside */
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .button:hover {
+                background-color: rgb(240, 219, 219);
+                color: rgb(255, 2, 2);
+            }
     /* Estilos específicos para el primer párrafo */
     p.first-paragraph {
       background-color: #666;
       color: #fff;
       padding: 10px;
       border-radius: 5px;
+      white-space: pre-line; 
     }
 
     /* Card styles */
@@ -133,19 +176,27 @@ export const POST = async (req) => {
   </style>
 </head>
 <body>
-  <img src="https://www.spanishwithalex.com/images/cards/pedirPerdon.jpg" alt="Bienvenido">
-  <h1>¡Hey!😊 ¡Te has suscrito! ¡Bienvenid@, 😃!</h1>
-  <p></p>
-  <p class="first-paragraph">Antes de nada, puedes confirmar tu email.</p>
+  <h1>¡Hola!👋 ¡Bienvenid@!😊</h1>
+
+ <p class="first-paragraph"> Are you ready to unleash your speaking superpower?I am sure you do. I am here to guide all the way,and to make sure that you  are going to love learning and to stay motivated. MakE sure you keep a lookout in your inbox for our newsletters. I am going to contact you soon with learning content, tipsand juice advice. 
+    
+    Just one morestep to go. Please confirm your email address by clicking the button below.🚀
+</p>
+
+
 
   <!-- botón personalizado -->
-  <button style="margin-left: 4px; border: 2px solid red; color: red; width: auto; cursor: pointer; background-color: white; padding: 8px 16px; border-radius: 4px;">
+  <!-- <button style="margin-left: 4px; border: 2px solid red; color: red; width: auto; cursor: pointer; background-color: white; padding: 8px 16px; border-radius: 4px;">
     <a href="https://www.spanishwithalex.com/" style="text-decoration: none; color: red;">Confirmation email</a>
-  </button>
+  </button> -->
 
-  <p>¿Qué significa esta titulitis…? Poco, la verdad. Para decirte la verdad, aprendí más de la educación fuera de la carrera. Cualifican que estoy cualificado* (con tono divertido).</p>
+ <button class="button" >
+    <a href="https://www.spanishwithalex.com/" style="text-decoration: none; color: red;">Confirmation email</a>
+</button>
 
-  <p>También, para tener clases juntos, es importante que te caiga un mínimo de bien. :) Y tienes que conocerme. Porque vamos a hablar, y hablar mucho. Y si posiblemente que cuente un poco de mi vida :)</p>
+<div class="space">  <img src="https://yt3.googleusercontent.com/r54bOUhebt9WAn61Uyp30snMW7lP0RlKqlByy2lIh6mwNQCd0nOoimYQXaAW0GbkEPTAGyjl=s176-c-k-c0x00ffffff-no-rj" alt="Bienvenido">
+</div>
+  <!-- <p>También, para tener clases juntos, es importante que te caiga un mínimo de bien. :) Y tienes que conocerme. Porque vamos a hablar, y hablar mucho. Y si posiblemente que cuente un poco de mi vida :)</p>
 
   <p>Bueno…o .mucho…jajaj me encanta…las graciosas. (Tirado en la cama, de k hablo con.., ejercicios corregidos…clase. Cambia) Siempre hago clases más amenas.</p>
 
@@ -187,9 +238,10 @@ export const POST = async (req) => {
   <p><strong>P. D. 1:</strong> Hoy fui yo, mañana quizás tú. Pronto te volveré a escribir. Seguro. Y preguntarte unas cosillas. :)</p>
 
   <div class="container">
-    <div class="inner-container">
+    <div class="inner-container"> -->
+
       <!-- Repeat the following block for each card -->
-      <div class="card_outer">
+      <!-- <div class="card_outer">
         <div class="card_main">
           <div class="card_first_div">
             <h2 class="card_first_div_heading">CUP VERBS</h2>
@@ -214,7 +266,7 @@ export const POST = async (req) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- End of card block -->
     </div>
   </div>

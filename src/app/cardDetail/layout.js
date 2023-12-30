@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Text, Card, CardBody, CardFooter } from '@chakra-ui/react'
+import { Text, Card, CardBody, CardFooter, Image } from '@chakra-ui/react'
 import './CardDetail.css'; // Asegúrate de importar tu archivo de CSS aquí
 import Link from "next/link";
 
@@ -14,8 +14,7 @@ const CardDetail = ({material}) => {
     <Link href= {`/materials/${material.tipo}/${material.urlTitulo}`}>  
       <Card>
         <CardBody className="tarjeta" padding={0}>
-          {" "}
-          <img src={material.urlImagen} alt="" className="tarjeta-imagen" />
+          <Image src={material.urlImagen} alt="" className="tarjeta-imagen" />
         </CardBody>
         <CardFooter
           style={{
