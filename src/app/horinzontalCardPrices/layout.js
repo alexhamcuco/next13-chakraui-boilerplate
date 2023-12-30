@@ -7,6 +7,7 @@ import {
   Container,
   useColorModeValue,
   Box,
+  Heading,
 } from "@chakra-ui/react";
 import CustomButton from "../customButton/layout";
 import { useTheme } from "@emotion/react";
@@ -17,15 +18,15 @@ const HorizontalCardPrices = () => {
   return (
     <Box
       bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}
-      p="8 "
+      my="16"
     >
-      <Container
-        mt={9}
-        textAlign={"center"}
-        maxW={{ base: "container.sm", md: "6xl" }}
-      >
-                <Box p="49">
-
+      <Container maxW={{ base: "container.sm", md: "6xl" }}>
+        <Flex mb="8" direction={"column"} alignItems={"center"}>
+          <Text mb="4" color="red">
+            PRICING
+          </Text>
+          <Heading fontSize="3xl">Very cheap.</Heading>
+        </Flex>
         <Flex
           flexDirection={{ base: "column", md: "row" }}
           borderWidth="1px"
@@ -44,20 +45,38 @@ const HorizontalCardPrices = () => {
           )}
           p="8"
         >
-          <Flex direction="column">
+          <Flex direction="column" alignItems={"center"}>
             <Text fontSize="8xl" color="orange">
-              $20 
+              $20
             </Text>
-            <Text fontSize="sm" mt={2}>
+            <Text fontWeight="bold" mt={2}>
               per month
             </Text>
           </Flex>
-          <Flex direction="column">
+          <Flex my={{ base: "12", md: "0" }} direction="column">
             <VStack align="start" spacing={4}>
               <Text> 📌 Access to all Exclusive content</Text>
-              <Divider />
+              <Divider
+               
+                borderColor={useColorModeValue(
+                  colors.light.border,
+                  colors.dark.border
+                )}
+                borderWidth="1px"
+                height="auto"
+               
+              />
               <Text>📌Discord channel</Text>
-              <Divider />
+              <Divider
+                
+                borderColor={useColorModeValue(
+                  colors.light.border,
+                  colors.dark.border
+                )}
+                borderWidth="1px"
+                height="auto"
+                
+              />
               <Text>📌 Telegram group</Text>
             </VStack>
           </Flex>
@@ -65,7 +84,6 @@ const HorizontalCardPrices = () => {
             <CustomButton label="Subscribe" />
           </Flex>
         </Flex>
-        </Box>
       </Container>
     </Box>
   );

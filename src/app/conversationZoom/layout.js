@@ -54,7 +54,9 @@ const ConversationZoom = () => {
               spanish. If you want my help just book a lesson and lets start
               today!
             </Text>
-            <CustomButton label="Book a lesson" onClick={showAlert} />
+            <Box>
+              <CustomButton label="Book a lesson" onClick={showAlert} />
+            </Box>
           </Flex>
         </Flex>
       </Container>
