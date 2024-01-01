@@ -176,9 +176,9 @@ export const POST = async (req) => {
   </style>
 </head>
 <body>
-  <h1>¡Hola!👋 ¡Bienvenid@!😊</h1>
+  <h1>¡Hola!👋 ¡Bienvenid@!</h1>
 
- <p class="first-paragraph"> Are you ready to unleash your speaking superpower?I am sure you do. I am here to guide all the way,and to make sure that you  are going to love learning and to stay motivated. MakE sure you keep a lookout in your inbox for our newsletters. I am going to contact you soon with learning content, tipsand juice advice. 
+ <p class="first-paragraph"> Are you ready to <br />unleash your speaking <br />superpower?I am sure you do. I am here to guide all the way,and to make sure that you  are going to love learning and to stay motivated. MakE sure you keep a lookout in your inbox for our newsletters. I am going to contact you soon with learning content, tipsand juice advice. 
     
     Just one morestep to go. Please confirm your email address by clicking the button below.🚀
 </p>
