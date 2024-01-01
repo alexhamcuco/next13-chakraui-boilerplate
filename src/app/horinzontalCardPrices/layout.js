@@ -18,14 +18,13 @@ const HorizontalCardPrices = () => {
   return (
     <Box
       bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}
-      my="16"
     >
-      <Container maxW={{ base: "container.sm", md: "6xl" }}>
+      <Container my="16" maxW={{ base: "container.sm", md: "6xl" }}>
         <Flex mb="8" direction={"column"} alignItems={"center"}>
           <Text mb="4" color="red">
             PRICING
-          </Text>
-          <Heading fontSize="3xl">Very cheap.</Heading>
+          </Text> 
+          <Heading fontSize="3xl">Limited time only.</Heading>
         </Flex>
         <Flex
           flexDirection={{ base: "column", md: "row" }}
@@ -57,25 +56,21 @@ const HorizontalCardPrices = () => {
             <VStack align="start" spacing={4}>
               <Text> 📌 Access to all Exclusive content</Text>
               <Divider
-               
                 borderColor={useColorModeValue(
                   colors.light.border,
                   colors.dark.border
                 )}
                 borderWidth="1px"
                 height="auto"
-               
               />
               <Text>📌Discord channel</Text>
               <Divider
-                
                 borderColor={useColorModeValue(
                   colors.light.border,
                   colors.dark.border
                 )}
                 borderWidth="1px"
                 height="auto"
-                
               />
               <Text>📌 Telegram group</Text>
             </VStack>

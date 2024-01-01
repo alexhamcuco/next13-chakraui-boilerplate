@@ -1,12 +1,25 @@
 import React, { useState } from "react";
-import { Box, Text, Link, FormControl, Input, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Link,
+  FormControl,
+  Input,
+  Button,
+  Spinner,
+} from "@chakra-ui/react";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [showMessage, setShowMessage] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const isValidEmail = () => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
   };
 
   async function handleSubmit(e) {
@@ -14,6 +27,8 @@ const Footer = () => {
     const userEmail = { email };
 
     try {
+      setLoading(true);
+
       // Make the request to your API
       await fetch("/api/users", {
         method: "POST",
@@ -23,17 +38,17 @@ const Footer = () => {
 
       // Clear the email field
       setEmail("");
+      setShowMessage(true);
     } catch (error) {
       console.error("Error submitting the form:", error);
-      // Handle errors if necessary
+      setLoading(false); // Desactivar el spinner en caso de error
+      return;
     }
 
-    // Show success message regardless of success or error
-    setShowMessage(true);
-
-    // Hide the message after 4 seconds
+    // Desactivar el spinner después de mostrar el mensaje de éxito
     setTimeout(() => {
       setShowMessage(false);
+      setLoading(false); // Desactivar el spinner al mismo tiempo que se oculta el mensaje
     }, 4000);
   }
 
@@ -48,6 +63,7 @@ const Footer = () => {
       <Box display="inline-block" maxW="300px" mx="auto" p="4">
         {showMessage && (
           <Box
+            mb="2"
             bgColor="green"
             color="white"
             p="2"
@@ -55,14 +71,19 @@ const Footer = () => {
             borderRadius="md"
             textAlign="center"
           >
-            <Text fontSize="sm">Email sent successfully!</Text>
+            <Text fontSize="sm">
+              Email sent successfully! Confirm to complete.
+            </Text>
           </Box>
         )}
         <form onSubmit={handleSubmit}>
-          <FormControl>
+          <FormControl mb="2">
             <Input
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                handleEmailChange(e);
+                setEmail(e.target.value);
+              }}
               type="email"
               placeholder="Your email address"
               p="2"
@@ -82,26 +103,11 @@ const Footer = () => {
               color: "white",
             }}
             isDisabled={!isValidEmail()}
+            isLoading={loading}
+            spinner={<Spinner size="sm" />}
           >
             Subscribe for FREE
           </Button>
-          {/* <button
-            type="submit"
-            disabled={!!email}
-            style={{
-              marginLeft: "4px",
-              border: "2px solid red",
-              color: "red",
-              width: "auto",
-              cursor: "pointer",
-              backgroundColor: "white",
-              padding: "12px 16px", // Added padding here
-              borderRadius: "4px",
-              transition: "background-color 0.3s ease",
-            }}
-          >
-            Subscribe for FREE
-          </button> */}
         </form>
         <Text fontSize="sm">
           &copy; {new Date().getFullYear()} Spanish with Alex. All rights

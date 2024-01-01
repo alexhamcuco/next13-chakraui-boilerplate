@@ -109,12 +109,13 @@ export const POST = async (req) => {
             }
     /* Estilos específicos para el primer párrafo */
     p.first-paragraph {
-      background-color: #666;
-      color: #fff;
+      background-color: #fefff;
+      color: #000000;
       padding: 10px;
       border-radius: 5px;
-      white-space: pre-line; 
-    }
+       text-align: left;
+      font-family: 'Arial';
+        }
 
     /* Card styles */
     .card_outer {
@@ -178,10 +179,16 @@ export const POST = async (req) => {
 <body>
   <h1>¡Hola!👋 ¡Bienvenid@!</h1>
 
- <p class="first-paragraph"> Are you ready to <br />unleash your speaking <br />superpower?I am sure you do. I am here to guide all the way,and to make sure that you  are going to love learning and to stay motivated. MakE sure you keep a lookout in your inbox for our newsletters. I am going to contact you soon with learning content, tipsand juice advice. 
-    
-    Just one morestep to go. Please confirm your email address by clicking the button below.🚀
-</p>
+ <p class="first-paragraph"> Are you ready to unleash your speaking superpower?<br />
+ 
+If you want to speak from day one, and learn from others mistakes, <br />
+you  are going to love learning with us.<br />
+Make sure you keep a lookout in your inbox for our newsletters.<br />
+ I am going to contact you soon with learning content, tips and juice advice. <br />
+    </p>
+    Just one morestep to go. Please confirm your email address by clicking the button below.🚀<br />
+    <br />
+
 
 
 
