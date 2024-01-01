@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, Image, Text, Icon, Link, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Icon, Link, useColorModeValue, Heading, Divider } from "@chakra-ui/react";
 import { FaTwitter, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa"; // Importa los iconos de redes sociales
 import {useTheme} from "@emotion/react"
 
@@ -11,6 +11,12 @@ const ContactCard = () => {
 
   return (
     <Box bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}>
+      <Flex mb="8" direction={"column"} alignItems={"center"}>
+        <Text mb="4" color="red">
+          SOCIALS
+        </Text>
+        <Heading fontSize="3xl">Follow for more.</Heading>
+      </Flex>
       <Box
         borderWidth="1px"
         borderRadius="lg"
@@ -21,12 +27,9 @@ const ContactCard = () => {
         margin="0 auto"
         textAlign="center"
       >
-        <Flex justifyContent="center">
-          <Text color="red">SOCIAL MEDIA</Text>
-        </Flex>
-        <Text>
-          Follow me on my socials and receive weekly educational tips. 👉¡Vamos
-          allá!
+        <Flex justifyContent="center"></Flex>
+        <Text mb={4}>
+          Follow me and receive weekly educational pills. ¡Vamos allá!👉
         </Text>
         <Image
           src="/images/contact_img.png"
@@ -34,7 +37,15 @@ const ContactCard = () => {
           w="100%"
           h="auto"
         />
-        <Text mt={4}>Sígueme en mis redes:</Text>
+        <Divider
+          borderColor={useColorModeValue(
+            colors.light.border,
+            colors.dark.border
+          )}
+          borderWidth="1px"
+          height="auto"
+          my={4}
+        />
         <Flex justifyContent="center" mt={2}>
           <Link
             href="https://www.youtube.com/channel/UCbx58EYkaC1yJBxNuOvhDOg"

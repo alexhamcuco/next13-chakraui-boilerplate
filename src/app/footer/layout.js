@@ -57,7 +57,7 @@ const Footer = () => {
       <Text fontSize="sm" mt="2">
         <Link href="/legal-terms">Legal Terms</Link>
       </Text>
-      <Text fontSize="sm" mt="2">
+      <Text fontSize="md" mt="2">
         Subscribe to our newsletter:
       </Text>
       <Box display="inline-block" maxW="300px" mx="auto" p="4">
@@ -95,7 +95,7 @@ const Footer = () => {
             </Text>
           )}
 
-          <Button
+          <Button mb={4}
             type="submit"
             colorScheme="red"
             color="red"
