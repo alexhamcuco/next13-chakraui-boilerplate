@@ -49,7 +49,7 @@ const Footer = () => {
     setTimeout(() => {
       setShowMessage(false);
       setLoading(false); // Desactivar el spinner al mismo tiempo que se oculta el mensaje
-    }, 4000);
+    },3000);
   }
 
   return (
@@ -72,7 +72,7 @@ const Footer = () => {
             textAlign="center"
           >
             <Text fontSize="sm">
-              Email sent successfully! Confirm to complete.
+              Email sent! Please confirm.
             </Text>
           </Box>
         )}
@@ -94,6 +94,7 @@ const Footer = () => {
               Please enter a valid email address
             </Text>
           )}
+
           <Button
             type="submit"
             colorScheme="red"
@@ -104,9 +105,11 @@ const Footer = () => {
             }}
             isDisabled={!isValidEmail()}
             isLoading={loading}
+            loadingText="Subscribing for free"
+            variant="outline"
             spinner={<Spinner size="sm" />}
           >
-            Subscribe for FREE
+            Subscribe for free
           </Button>
         </form>
         <Text fontSize="sm">
