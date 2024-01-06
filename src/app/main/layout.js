@@ -11,6 +11,7 @@ import HorizontalCardIlustrations from "../horizontalCardIlustrations/layout";
 import ContactCard from "../contactCard/layout";
 import ConversationZoom from "../conversationZoom/layout";
 import NavbarLayout from "../navbarLayout/layout";
+import PruebaCarrouselLayout from "../pruebaCarrouselLayout/layout";
 
 export const Main = () => {
   return (
@@ -24,6 +25,7 @@ export const Main = () => {
       <ReviewCardCarousel />
       <HorizontalCardIlustrations />
       <MaterialCardCarousel />
+      <PruebaCarrouselLayout />
       <ContactCard />
     </Flex>
   );
