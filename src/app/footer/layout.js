@@ -39,16 +39,15 @@ const Footer = () => {
       // Clear the email field
       setEmail("");
       setShowMessage(true);
+      setLoading(false);
     } catch (error) {
       console.error("Error submitting the form:", error);
       setLoading(false); // Desactivar el spinner en caso de error
       return;
     }
 
-    // Desactivar el spinner después de mostrar el mensaje de éxito
     setTimeout(() => {
       setShowMessage(false);
-      setLoading(false); // Desactivar el spinner al mismo tiempo que se oculta el mensaje
     },3000);
   }
 
@@ -58,7 +57,8 @@ const Footer = () => {
         <Link href="/legal-terms">Legal Terms</Link>
       </Text>
       <Text fontSize="md" mt="2">
-        Subscribe to our newsletter:
+        Subscribe to our newsletter and receive tips, exclusive discounts and
+        flash sales:
       </Text>
       <Box display="inline-block" maxW="300px" mx="auto" p="4">
         {showMessage && (
@@ -71,9 +71,7 @@ const Footer = () => {
             borderRadius="md"
             textAlign="center"
           >
-            <Text fontSize="sm">
-              Email sent! Please confirm.
-            </Text>
+            <Text fontSize="sm">Email sent! Check your inbox.</Text>
           </Box>
         )}
         <form onSubmit={handleSubmit}>
@@ -95,7 +93,8 @@ const Footer = () => {
             </Text>
           )}
 
-          <Button mb={4}
+          <Button
+            mb={4}
             type="submit"
             colorScheme="red"
             color="red"
@@ -105,11 +104,12 @@ const Footer = () => {
             }}
             isDisabled={!isValidEmail()}
             isLoading={loading}
-            loadingText="Subscribing for free"
+            loadingText="Doing some magic..."
             variant="outline"
             spinner={<Spinner size="sm" />}
-          >
-            Subscribe for free
+            spinnerPlacement="end"
+            >
+            Subscribe
           </Button>
         </form>
         <Text fontSize="sm">
