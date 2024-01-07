@@ -1,18 +1,17 @@
 "use client";
 
-import { Box, Text, Flex, Center, useColorModeValue } from "@chakra-ui/react";
+import { Box, Text, Flex, Center, useColorModeValue, Container } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
 
 const ReviewCard = ({ review }) => {
       const { colors } = useTheme();
 
   return (
-    <Center
-      h="15vh"
-      // mt="10vh"
-      w="100%"
-    >
+   
+      <Container my="16" maxW={{ base: "container.sm", md: "6xl" }}>
+
       <Box
+        mx="15"
         maxW="100%"
         borderWidth="1px"
         borderRadius="lg"
@@ -33,7 +32,7 @@ const ReviewCard = ({ review }) => {
           <Text ml="4">- {review.author}</Text>
         </Flex>
       </Box>
-    </Center>
+      </Container>
   );
 };
 

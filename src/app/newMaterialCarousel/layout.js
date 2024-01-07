@@ -9,7 +9,6 @@ import {
   Flex,
   Heading,
   Text,
-  // Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
@@ -20,7 +19,7 @@ import { useMediaQuery } from "@chakra-ui/react";
 
 const NewMaterialCarousel = ({ materiales }) => {
   const { colors } = useTheme();
-  const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
+  const [isSmallScreen] = useMediaQuery("(max-width: 1200px)");
 
   // Calculate the number of elements to show based on screen size
   const elementsToShow = isSmallScreen ? 1 : 3;
