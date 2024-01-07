@@ -35,7 +35,7 @@ const Navbar = ({ materiales }) => {
       px={4}
       position="fixed" // Esta línea fija la posición de la barra de navegación
       width="100%"
-      zIndex={2}
+      zIndex={3}
     >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <Flex>
