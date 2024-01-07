@@ -5,11 +5,17 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ReviewCard from "../reviewCard/layout";
 import { useTheme } from "@emotion/react";
 import { getReviews } from "../lib/api";
+import { useMediaQuery } from "@chakra-ui/react";
+
 
 function ReviewCardCarousel() {
   const [reviews, setReviews] = useState([]);
   const [error, setError] = useState(null);
   const { colors } = useTheme();
+  const [isSmallScreen] = useMediaQuery("(max-width: 1200px)");
+
+  // Calculate the number of elements to show based on screen size
+  const elementsToShow = isSmallScreen ? 1 : 3;
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -47,7 +53,19 @@ function ReviewCardCarousel() {
         <Flex justifyContent="center">
           <Text color="red">REVIEWS</Text>
         </Flex>
-        <Carousel>
+        <Carousel
+          infiniteLoop
+          showStatus={false}
+          showArrows={!isSmallScreen}
+          showThumbs={false}
+          centerMode={!isSmallScreen}
+          emulateTouch={!isSmallScreen}
+          swipeScrollTolerance={!isSmallScreen ? 2 : 10}
+          centerSlidePercentage={100 / elementsToShow}
+          showSides={!isSmallScreen}
+          selectedItem={0}
+          interval={5000}
+        >
           {reviews &&
             reviews.map((review) => (
               <ReviewCard key={review._id} review={review} />
