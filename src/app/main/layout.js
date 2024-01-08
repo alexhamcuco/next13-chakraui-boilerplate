@@ -16,7 +16,6 @@ import NewMaterialCarouselLAyout from "../newMaterialCarouselLayout/layout";
 export const Main = () => {
   return (
     <Flex direction="column">
-      {/* <NavbarLayout /> */}
       <Header />
       {/* <HorizontalCard /> */}
       <VideoContainer />

@@ -1,10 +1,5 @@
-import { getMateriales } from "../lib/api";
-import Navbar from "../navbar/layout";
+import NavbarSC from "../navbarSC/layout";
 
-const NavbarLayout = async () => {
-  const materiales = await getMateriales();
-
-  return <Navbar materiales={materiales} />;
-};
+const NavbarLayout = () => <NavbarSC />;
 
 export default NavbarLayout;
