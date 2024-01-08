@@ -1,11 +1,15 @@
-"use client";
-
-import { Box, Text, Flex, Center, useColorModeValue, Container } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Flex,
+  useColorModeValue,
+  Container,
+  Avatar,
+} from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
-import Image from "next/image";
 
 const ReviewCard = ({ review }) => {
-      const { colors } = useTheme();
+  const { colors } = useTheme();
 
   return (
     <Container my="16" maxW={{ base: "container.sm", md: "6xl" }}>
@@ -17,26 +21,38 @@ const ReviewCard = ({ review }) => {
         borderColor="red.500"
         overflow="hidden"
         boxShadow="lg"
-        flexDirection="row"
-        display="flex"
         bg={useColorModeValue(
           colors.light.bgTranspLight,
           colors.dark.bgTranspDark
         )}
       >
-        <Image
-          src={review.profilePicture} // Asegúrate de tener la URL de la imagen
-          alt="Foto de perfil"
-          width={1}
-          height={1}
-          borderRadius="full" // Esto hará que la imagen sea redonda
-          boxSize="10px" // Ajusta el tamaño de la imagen según tus necesidades
-        />
-        <Flex p="4" alignItems="center" flex="1">
+        {/* Stars Section */}
+        <Flex
+          p="4"
+          alignItems="center"
+          justifyContent="space-between"
+          borderBottom="1px solid red.500"
+        >
           <Text fontSize="xl" fontWeight="bold">
-            &quot; {review.text}&quot;
+            &quot;{review.text}&quot;
           </Text>
-          <Text ml="4">- {review.author}</Text>
+        </Flex>
+
+        {/* Reviews Section */}
+        <Flex p="4" alignItems="center">
+          <Avatar
+            size="lg"
+            src={review.profilePicture}
+            alt="Foto de perfil"
+            mr={4}
+            border="2px solid red"
+          />
+          <Box>
+            <Text mt={2} color="gray.500">
+              - {review.author}
+            </Text>
+            <Text fontSize="1xl"> ⭐⭐⭐⭐⭐ </Text>
+          </Box>
         </Flex>
       </Box>
     </Container>
