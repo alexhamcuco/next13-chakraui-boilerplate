@@ -154,6 +154,10 @@ export const POST = async (req) => {
       font-size: 14px;
     }
 
+    .invisible-text {
+      display: none;
+    }
+
     .card_third_div_first input {
       width: 50px;
       padding: 5px;
@@ -177,6 +181,8 @@ export const POST = async (req) => {
   </style>
 </head>
 <body>
+
+<p class="invisible-text" >Hola, soy Alex, confirma tu email aquí. </p>
   <h1>¡Hola!👋 ¡Bienvenid@!</h1>
 
  <p class="first-paragraph"> Are you ready to unleash your speaking superpower?<br />
@@ -186,7 +192,7 @@ you  are going to love learning with us.<br />
 Make sure you keep a lookout in your inbox for our newsletters.<br />
  I am going to contact you soon with learning content, tips and juice advice. <br />
     </p>
-    Just one morestep to go. Please confirm your email address by clicking the button below.🚀<br />
+    <p>Just one morestep to go. Please confirm your email address by clicking the button below.🚀 </p> <br />
     <br />
 
 

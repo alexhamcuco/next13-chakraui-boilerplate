@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Text, Flex, useColorModeValue, Image } from "@chakra-ui/react";
+import { Box, Text, Flex, useColorModeValue, Image, Container } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ReviewCard from "../reviewCard/layout";
@@ -49,29 +49,32 @@ function ReviewCardCarousel() {
       />
 
       {/* Content Layer */}
-      <Box position="relative" zIndex={1}>
-        <Flex justifyContent="center">
-          <Text color="red">REVIEWS</Text>
-        </Flex>
-        <Carousel
-          infiniteLoop
-          showStatus={false}
-          showArrows={!isSmallScreen}
-          showThumbs={false}
-          centerMode={!isSmallScreen}
-          emulateTouch={!isSmallScreen}
-          swipeScrollTolerance={!isSmallScreen ? 2 : 10}
-          centerSlidePercentage={100 / elementsToShow}
-          showSides={!isSmallScreen}
-          selectedItem={0}
-          interval={5000}
-        >
-          {reviews &&
-            reviews.map((review) => (
-              <ReviewCard key={review._id} review={review} />
-            ))}
-        </Carousel>
-      </Box>
+      <Container my="16" maxW={{ base: "container.sm", md: "6xl" }}>
+        
+        <Box position="relative" zIndex={1}>
+          <Flex justifyContent="center">
+            <Text color="red">REVIEWS</Text>
+          </Flex>
+          <Carousel
+            infiniteLoop
+            showStatus={false}
+            showArrows={!isSmallScreen}
+            showThumbs={false}
+            centerMode={!isSmallScreen}
+            emulateTouch={!isSmallScreen}
+            swipeScrollTolerance={!isSmallScreen ? 2 : 10}
+            centerSlidePercentage={100 / elementsToShow}
+            showSides={!isSmallScreen}
+            selectedItem={0}
+            interval={5000}
+          >
+            {reviews &&
+              reviews.map((review) => (
+                <ReviewCard key={review._id} review={review} />
+              ))}
+          </Carousel>
+        </Box>
+      </Container>
     </Box>
   );
 }
