@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Text, Flex, useColorModeValue, Image, Container } from "@chakra-ui/react";
+import { Box, Text, Flex, useColorModeValue, Image, Container, Heading } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ReviewCard from "../reviewCard/layout";
@@ -50,11 +50,14 @@ function ReviewCardCarousel() {
 
       {/* Content Layer */}
       <Container my="16" maxW={{ base: "container.sm", md: "6xl" }}>
-        
         <Box position="relative" zIndex={1}>
           <Flex justifyContent="center">
             <Text color="red">REVIEWS</Text>
           </Flex>
+          <Heading fontSize="3xl" textAlign="center">
+            What our customers say about us
+          </Heading>
+
           <Carousel
             infiniteLoop
             showStatus={false}
