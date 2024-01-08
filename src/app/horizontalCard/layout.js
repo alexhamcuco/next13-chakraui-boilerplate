@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Image, Text, Flex, Center, Button } from "@chakra-ui/react";
+import { Box, Text, Flex, Center, Button } from "@chakra-ui/react";
 
 const HorizontalCard = () => {
   return (

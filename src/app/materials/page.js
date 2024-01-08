@@ -1,4 +1,3 @@
-import React from "react";
 import { getMateriales } from "../lib/api";
 import List from "../list/layout";
 

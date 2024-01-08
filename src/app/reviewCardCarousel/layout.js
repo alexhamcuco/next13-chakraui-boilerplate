@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import { Box, Text, Flex, useColorModeValue, Image } from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";

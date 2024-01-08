@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import { Button } from "@chakra-ui/react";
 
 const AddToBasketButton = ({ onClick }) => {
@@ -13,8 +14,7 @@ const AddToBasketButton = ({ onClick }) => {
         color: "white",
       }}
       onClick={onClick} // Prop onClick para manejar el evento de clic
-    >
-    </Button>
+    ></Button>
   );
 };
 

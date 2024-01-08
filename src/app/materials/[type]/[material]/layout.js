@@ -1,4 +1,3 @@
-import React from "react";
 import { getMateriales } from "@/app/lib/api";
 import Material from "./page";
 

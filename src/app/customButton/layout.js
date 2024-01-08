@@ -1,10 +1,10 @@
-import React from "react";
+"use client";
+
 import { Button } from "@chakra-ui/react";
 
 const CustomButton = ({ label, onClick }) => {
   return (
     <Button
-      
       border="2px solid red"
       color="red"
       width="auto"

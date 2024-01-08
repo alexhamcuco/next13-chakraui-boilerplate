@@ -1,7 +1,5 @@
-import React from 'react'
-
-const LoginPage = ({materiales}) => {
+const LoginPage = ({ materiales }) => {
   return <div>` LOGIN` </div>;
-}
+};
 
-export default LoginPage; 
+export default LoginPage;

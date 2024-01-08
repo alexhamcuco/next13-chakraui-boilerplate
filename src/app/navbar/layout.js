@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import {
   Box,
   Flex,
@@ -17,6 +16,7 @@ import {
   useColorModeValue,
   Stack,
   useColorMode,
+  Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import Link from "next/link";
@@ -49,11 +49,10 @@ const Navbar = ({ materiales }) => {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Link href="/">
-              <img
+              <Image
                 src="/images/BanderitaEspañaTampon.png"
                 alt="LOGO SWA"
-                width="78"
-                height="78"
+                style={{ width: "78px" }}
               />
             </Link>
             <HStack

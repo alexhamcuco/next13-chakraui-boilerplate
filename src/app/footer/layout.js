@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+"use client";
+
+import { useState } from "react";
 import {
   Box,
   Text,
@@ -48,7 +50,7 @@ const Footer = () => {
 
     setTimeout(() => {
       setShowMessage(false);
-    },3000);
+    }, 3000);
   }
 
   return (
@@ -108,7 +110,7 @@ const Footer = () => {
             variant="outline"
             spinner={<Spinner size="sm" />}
             spinnerPlacement="end"
-            >
+          >
             Subscribe
           </Button>
         </form>

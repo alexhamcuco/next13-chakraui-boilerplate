@@ -1,17 +1,12 @@
 "use client";
 
-import React from "react";
-import { Text, Card, CardBody, CardFooter, Image } from '@chakra-ui/react'
-import './CardDetail.css'; // Asegúrate de importar tu archivo de CSS aquí
+import { Text, Card, CardBody, CardFooter, Image } from "@chakra-ui/react";
 import Link from "next/link";
+import "./CardDetail.css";
 
-
-// hay que cambiaar el href para que desde la lista de todos los materiales funcione el link ya que le falta /materiales/..
-//al añadir /materiales en la linea 13 pensaba que iba a duplicar /materiales si hacías click desde la seleccion tipo pero no...
-
-const CardDetail = ({material}) => {
+const CardDetail = ({ material }) => {
   return (
-    <Link href= {`/materials/${material.tipo}/${material.urlTitulo}`}>  
+    <Link href={`/materials/${material.tipo}/${material.urlTitulo}`}>
       <Card>
         <CardBody className="tarjeta" padding={0}>
           <Image src={material.urlImagen} alt="" className="tarjeta-imagen" />
@@ -31,4 +26,3 @@ const CardDetail = ({material}) => {
 };
 
 export default CardDetail;
-

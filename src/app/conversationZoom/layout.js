@@ -1,9 +1,9 @@
-import React from "react";
+"use client";
+
 import {
   Flex,
   Image,
   Text,
-  Button,
   Container,
   Heading,
   useColorModeValue,

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import { Flex, Image, Box, Text, useColorModeValue } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Flex,
   Text,
@@ -76,16 +76,16 @@ const Header = () => {
         >
           <Flex gap={{ base: 4 }} width={"60%"} justifyContent={"space-around"}>
             <Flex direction={"column"}>
-              <Text fontSize={{ base: "1xl", sm: "1xl"}}>Sessions</Text>
-              <Text fontSize={{ base: "1xl", sm: "6xl"}}>10</Text>
+              <Text fontSize={{ base: "1xl", sm: "1xl" }}>Sessions</Text>
+              <Text fontSize={{ base: "1xl", sm: "6xl" }}>10</Text>
             </Flex>
             <Flex direction={"column"}>
-              <Text fontSize={{ base: "1xl", sm: "1xl"}}>Lessons</Text>
-              <Text fontSize={{ base: "1xl", sm: "6xl"}}>200</Text>
+              <Text fontSize={{ base: "1xl", sm: "1xl" }}>Lessons</Text>
+              <Text fontSize={{ base: "1xl", sm: "6xl" }}>200</Text>
             </Flex>
             <Flex direction={"column"}>
-              <Text fontSize={{ base: "1xl", sm: "1xl"}}>Podcasts</Text>
-              <Text fontSize={{ base: "1xl", sm: "6xl"}}>100</Text>
+              <Text fontSize={{ base: "1xl", sm: "1xl" }}>Podcasts</Text>
+              <Text fontSize={{ base: "1xl", sm: "6xl" }}>100</Text>
             </Flex>
           </Flex>
           <Divider

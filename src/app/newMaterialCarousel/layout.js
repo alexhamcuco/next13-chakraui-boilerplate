@@ -1,9 +1,7 @@
 "use client";
 
-import React from "react";
 import {
   Box,
-  Button,
   Card,
   CardBody,
   CardFooter,

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import {
   Flex,
   Text,
@@ -16,14 +17,12 @@ const HorizontalCardPrices = () => {
   const { colors } = useTheme();
 
   return (
-    <Box
-      bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}
-    >
+    <Box bg={useColorModeValue(colors.light.bgPrimary, colors.dark.bgPrimary)}>
       <Container my="16" maxW={{ base: "container.sm", md: "6xl" }}>
         <Flex mb="8" direction={"column"} alignItems={"center"}>
           <Text mb="4" color="red">
             PRICING
-          </Text> 
+          </Text>
           <Heading fontSize="3xl">Limited time only.</Heading>
         </Flex>
         <Flex

@@ -1,9 +1,9 @@
-import React from "react";
+"use client";
+
 import {
   Flex,
   Image,
   Text,
-  Button,
   Container,
   Heading,
   Box,
@@ -23,7 +23,11 @@ const VideoContainer = () => {
         textAlign={"center"}
       >
         <Flex direction={{ base: "column", lg: "row" }}>
-          <Text color="red" mb={2} display={{ base: "block", md: "none", lg: "none" }}>
+          <Text
+            color="red"
+            mb={2}
+            display={{ base: "block", md: "none", lg: "none" }}
+          >
             HOLA AMIGOS
           </Text>
           <Image
