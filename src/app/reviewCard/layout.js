@@ -2,14 +2,13 @@
 
 import { Box, Text, Flex, Center, useColorModeValue, Container } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
+import Image from "next/image";
 
 const ReviewCard = ({ review }) => {
       const { colors } = useTheme();
 
   return (
-   
-      <Container my="16" maxW={{ base: "container.sm", md: "6xl" }}>
-
+    <Container my="16" maxW={{ base: "container.sm", md: "6xl" }}>
       <Box
         mx="15"
         maxW="100%"
@@ -25,6 +24,14 @@ const ReviewCard = ({ review }) => {
           colors.dark.bgTranspDark
         )}
       >
+        <Image
+          src={review.profilePicture} // Asegúrate de tener la URL de la imagen
+          alt="Foto de perfil"
+          width={1}
+          height={1}
+          borderRadius="full" // Esto hará que la imagen sea redonda
+          boxSize="10px" // Ajusta el tamaño de la imagen según tus necesidades
+        />
         <Flex p="4" alignItems="center" flex="1">
           <Text fontSize="xl" fontWeight="bold">
             &quot; {review.text}&quot;
@@ -32,7 +39,7 @@ const ReviewCard = ({ review }) => {
           <Text ml="4">- {review.author}</Text>
         </Flex>
       </Box>
-      </Container>
+    </Container>
   );
 };
 
