@@ -33,7 +33,7 @@ const ReviewCard = ({ review }) => {
           justifyContent="space-between"
           borderBottom="1px solid red.500"
         >
-          <Text fontSize="xl" fontWeight="bold">
+          <Text fontSize="xl" fontWeight="bold" noOfLines={4}>
             &quot;{review.text}&quot;
           </Text>
         </Flex>
