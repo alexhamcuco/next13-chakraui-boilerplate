@@ -154,6 +154,10 @@ export const POST = async (req) => {
       font-size: 14px;
     }
 
+    .invisible-text {
+      display: none;
+    }
+
     .card_third_div_first input {
       width: 50px;
       padding: 5px;
@@ -177,6 +181,8 @@ export const POST = async (req) => {
   </style>
 </head>
 <body>
+
+<p class="invisible-text" >Hola, soy Alex, confirma tu email aquí. </p>
   <h1>¡Hola!👋 ¡Bienvenid@!</h1>
 
  <p class="first-paragraph"> Are you ready to unleash your speaking superpower?<br />
@@ -186,7 +192,7 @@ you  are going to love learning with us.<br />
 Make sure you keep a lookout in your inbox for our newsletters.<br />
  I am going to contact you soon with learning content, tips and juice advice. <br />
     </p>
-    Just one morestep to go. Please confirm your email address by clicking the button below.🚀<br />
+    <p>Just one morestep to go. Please confirm your email address by clicking the button below.🚀 </p> <br />
     <br />
 
 
@@ -201,7 +207,7 @@ Make sure you keep a lookout in your inbox for our newsletters.<br />
     <a href="https://www.spanishwithalex.com/" style="text-decoration: none; color: red;">Confirmation email</a>
 </button>
 
-<div class="space">  <img src="https://yt3.googleusercontent.com/r54bOUhebt9WAn61Uyp30snMW7lP0RlKqlByy2lIh6mwNQCd0nOoimYQXaAW0GbkEPTAGyjl=s176-c-k-c0x00ffffff-no-rj" alt="Bienvenido">
+<div class="space">  <img src="https://media.licdn.com/dms/image/C4E03AQGuWWL2TeDR0Q/profile-displayphoto-shrink_200_200/0/1654240984834?e=2147483647&v=beta&t=P41Owqg2IP2ONF5RP0dsUmwvBMQYwjGFjCXuSG7T9cc" alt="Bienvenido">
 </div>
   <!-- <p>También, para tener clases juntos, es importante que te caiga un mínimo de bien. :) Y tienes que conocerme. Porque vamos a hablar, y hablar mucho. Y si posiblemente que cuente un poco de mi vida :)</p>
 

@@ -1,31 +1,42 @@
-"use client";
-
-import { Box, Text, Flex, useColorModeValue, Image } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import {
+  Box,
+  Text,
+  Flex,
+  useColorModeValue,
+  Image,
+  Container,
+  Heading,
+} from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ReviewCard from "../reviewCard/layout";
 import { useTheme } from "@emotion/react";
-
-const reviews = [
-  {
-    id: 1,
-    text: "⭐⭐⭐⭐⭐ 5/5  Método excelente. ¡Recomiendo totalmente!",
-    author: "Michael Knight",
-  },
-  {
-    id: 2,
-    text: "⭐⭐⭐⭐⭐ 5/5 Las reseñas son una excelente manera de compartir opiniones.",
-    author: "María García",
-  },
-  {
-    id: 3,
-    text: "⭐⭐⭐⭐⭐ 5/5 Este producto cambió mi vida. ¡No puedo vivir sin él!",
-    author: "Luis Rodríguez",
-  },
-];
+import { getReviews } from "../lib/api";
+import { useMediaQuery } from "@chakra-ui/react";
 
 function ReviewCardCarousel() {
+  const [reviews, setReviews] = useState([]);
+  const [error, setError] = useState(null);
   const { colors } = useTheme();
+  const [isSmallScreen] = useMediaQuery("(max-width: 1200px)");
+
+  // Calculate the number of elements to show based on screen size
+  const elementsToShow = isSmallScreen ? 1 : 3;
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const reviewsData = await getReviews();
+        setReviews(reviewsData);
+      } catch (error) {
+        console.error("Error fetching reviews:", error);
+        setError(error);
+      }
+    };
+
+    fetchReviews();
+  }, []);
 
   return (
     <Box
@@ -45,16 +56,57 @@ function ReviewCardCarousel() {
       />
 
       {/* Content Layer */}
-      <Box position="relative" zIndex={1}>
-        <Flex justifyContent="center">
-          <Text color="red">REVIEWS</Text>
-        </Flex>
-        <Carousel>
-          {reviews.map((review) => (
-            <ReviewCard key={review.id} review={review} />
-          ))}
-        </Carousel>
-      </Box>
+      <Container my="16" maxW={{ base: "container.sm", md: "6xl" }}>
+        <Box position="relative" zIndex={1}>
+          <Flex justifyContent="center">
+            <Text color="red">REVIEWS</Text>
+          </Flex>
+          <Heading fontSize="3xl" textAlign="center">
+            What our customers say about us
+          </Heading>
+
+          <Carousel
+            infiniteLoop
+            showStatus={false}
+            showArrows={!isSmallScreen}
+            showThumbs={false}
+            centerMode={!isSmallScreen}
+            emulateTouch={!isSmallScreen}
+            swipeScrollTolerance={!isSmallScreen ? 2 : 10}
+            centerSlidePercentage={100 / elementsToShow}
+            showSides={!isSmallScreen}
+            selectedItem={0}
+            interval={5000}
+            renderIndicator={(onClickHandler, isSelected, index, label) => {
+              const icon = isSelected ? "●" : "○";
+              return (
+                <span
+                  style={{
+                    marginLeft: 20,
+                    color: "white",
+                    cursor: "pointer",
+                    color: "red",
+                  }}
+                  onClick={onClickHandler}
+                  onKeyDown={onClickHandler}
+                  value={index}
+                  key={index}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`${label} ${index + 1}`}
+                >
+                  {icon}
+                </span>
+              );
+            }}
+          >
+            {reviews &&
+              reviews.map((review) => (
+                <ReviewCard key={review._id} review={review} />
+              ))}
+          </Carousel>
+        </Box>
+      </Container>
     </Box>
   );
 }

@@ -6,7 +6,12 @@ const api = axios.create({
 
 export const getMateriales = async () => {
   const res = await api.get("/materials");
-    console.log("API Response in lib:", res);
+  console.log("API Response in lib:", res);
   return res.data;
-  
+};
+
+export const getReviews = async () => {
+  const res = await api.get("/reviews");
+  console.log("API Response for reviews in lib:", res);
+  return res.data;
 };

@@ -44,7 +44,7 @@ const Footer = () => {
       setLoading(false);
     } catch (error) {
       console.error("Error submitting the form:", error);
-      setLoading(false); // Desactivar el spinner en caso de error
+      setLoading(false); // Desactivar el spinner 
       return;
     }
 

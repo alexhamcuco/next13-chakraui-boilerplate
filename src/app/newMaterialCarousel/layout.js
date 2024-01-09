@@ -65,7 +65,7 @@ const CardMaterial = ({ material }) => {
 
 const NewMaterialCarousel = ({ materiales }) => {
   const { colors } = useTheme();
-  const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
+  const [isSmallScreen] = useMediaQuery("(max-width: 1200px)");
 
   const elementsToShow = isSmallScreen ? 1 : 3;
 
