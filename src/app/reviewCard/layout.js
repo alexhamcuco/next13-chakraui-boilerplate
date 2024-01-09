@@ -5,8 +5,10 @@ import {
   useColorModeValue,
   Container,
   Avatar,
+  Icon,
 } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
+import { FaQuoteRight } from "react-icons/fa";
 
 const ReviewCard = ({ review }) => {
   const { colors } = useTheme();
@@ -53,6 +55,7 @@ const ReviewCard = ({ review }) => {
             </Text>
             <Text fontSize="1xl"> ⭐⭐⭐⭐⭐ </Text>
           </Box>
+          <Icon mx="6" as={FaQuoteRight} color="red.500" boxSize={9} />
         </Flex>
       </Box>
     </Container>
