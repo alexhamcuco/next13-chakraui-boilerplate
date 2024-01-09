@@ -55,7 +55,7 @@ const ReviewCard = ({ review }) => {
             </Text>
             <Text fontSize="1xl"> ⭐⭐⭐⭐⭐ </Text>
           </Box>
-          <Icon mx="6" as={FaQuoteRight} color="red.500" boxSize={9} />
+          <Icon mx="6" as={FaQuoteRight} color="red.500" boxSize={10} />
         </Flex>
       </Box>
     </Container>
